@@ -1,0 +1,787 @@
+11.
+
+EDCBA
+FEDC
+GFE
+HG
+I
+
+Code:
+
+public class Question11
+{
+	public static void main(String arg[])
+	{
+		char ch = 'E';
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch1 = ch;
+			for(int j = 5; j >= i; j--)
+			{
+				System.out.print(ch1+" ");
+				ch1--;	
+			}
+			ch++;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question11.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question11
+E D C B A
+F E D C
+G F E
+H G
+I
+
+************************************************************************************
+
+Q12.
+
+EFGHI
+DEFG
+CDE
+BC
+A
+
+Code:
+public class Question12
+{
+	public static void main(String arg[])
+	{
+		char ch = 'E';
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch1 = ch;
+			for(int j = 5; j >= i; j--)
+			{
+				System.out.print(ch1+" ");
+				ch1++;	
+			}
+			ch--;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question12.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question12
+E F G H I
+D E F G
+C D E
+B C
+A
+
+*********************************************************************************
+Q13.
+
+A
+BC
+DEF
+GHIJ
+KLMNO
+
+
+
+Code:
+public class Question13
+{
+	public static void main(String arg[])
+	{
+		char ch = 'A';
+		for(int i = 1; i <= 5; i++)
+		{
+			
+			for(int j = 1; j <= i; j++)
+			{
+				System.out.print(ch+" ");
+				ch++;	
+			}
+			
+			System.out.println();
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question13.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question13
+A
+B C
+D E F
+G H I J
+K L M N O
+
+********************************************************************************
+
+
+14.
+    A
+   A B
+  A B C
+ A B C D
+A B C D E
+
+Code:
+public class Question14
+{
+	public static void main(String arg[])
+	{
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch = 'A';
+			for(int j = 5; j >= i; j--)
+			{
+				System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++)
+			{
+				System.out.print(ch+" ");
+				ch++;
+			}
+			
+			System.out.println();
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question14.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question14
+     A
+    A B
+   A B C
+  A B C D
+ A B C D E
+
+*******************************************************************************
+
+15.
+    A
+   B B
+  C C C
+ D D D D
+E E E E E
+
+Code:
+
+public class Question15
+{
+	public static void main(String arg[])
+	{
+		char ch = 'A';
+		for(int i = 1; i <= 5; i++)
+		{
+			for(int j = 5; j >= i; j--)
+			{
+				System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++)
+			{
+				System.out.print(ch+" ");
+			}
+			ch++;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question15.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question15
+     A
+    B B
+   C C C
+  D D D D
+ E E E E E
+
+****************************************************************************
+
+16.
+    A
+   B A
+  C B A
+ D C B A
+E D C B A
+
+Code:
+public class Question16
+{
+	public static void main(String arg[])
+	{
+		char ch = 'A';
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch1 = ch;
+			for(int j = 5; j >= i; j--)
+			{
+				System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++)
+			{
+				System.out.print(ch1+" ");
+				ch1--;
+			}
+			ch++;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question16.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question16
+     A
+    B A
+   C B A
+  D C B A
+ E D C B A
+
+*********************************************************************************
+
+17.
+
+    E
+   D E
+  C D E
+ B C D E
+A B C D E
+
+Code:
+
+public class Question17
+{
+	public static void main(String arg[])
+	{
+		char ch = 'E';
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch1 = ch;
+			for(int j = 5; j >= i; j--)
+			{
+				System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++)
+			{
+				System.out.print(ch1+" ");
+				ch1++;
+			}
+			ch--;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question17.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question17
+     E
+    D E
+   C D E
+  B C D E
+ A B C D E
+
+***************************************************************************
+
+18.
+    E
+   D D
+  C C C
+ B B B B
+A A A A A
+
+Code:
+public class Question18
+{
+	public static void main(String arg[])
+	{
+		char ch = 'E';
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch1 = ch;
+			for(int j = 5; j >= i; j--)
+			{
+				System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++)
+			{
+				System.out.print(ch1+" ");
+			}
+			ch--;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question18.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question18
+     E
+    D D
+   C C C
+  B B B B
+ A A A A A
+
+
+********************************************************************************
+
+19.
+E E E E E
+ D D D D
+  C C C
+   B B
+    A
+
+Code:
+public class Question19
+{
+	public static void main(String arg[])
+	{
+		char ch = 'E';
+		for(int i = 1; i <= 5; i++)
+		{
+			for(int j = 1; j <= i; j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k = i; k <= 5; k++)
+			{
+				System.out.print(ch+" ");
+			}
+			ch--;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question19.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question19
+ E E E E E
+  D D D D
+   C C C
+    B B
+     A
+
+********************************************************************************
+
+20.
+A B C D E
+ A B C D
+  A B C
+   A B
+    A
+
+Code:
+public class Question20
+{
+	public static void main(String arg[])
+	{
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch = 'A';
+			for(int j = 1; j <= i; j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k = i; k <= 5; k++)
+			{
+				System.out.print(ch+" ");
+				ch++;
+			}
+			System.out.println();
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question20.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question20
+ A B C D E
+  A B C D
+   A B C
+    A B
+     A
+
+*****************************************************************************
+
+21.
+A A A A A
+ B B B B
+  C C C
+   B B
+    A
+
+Code:
+public class Question21
+{
+	public static void main(String arg[])
+	{
+		char ch = 'A';
+		for(int i = 1; i <= 5; i++)
+		{
+			for(int j = 1; j <= i; j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k = i; k <= 5; k++)
+			{
+				System.out.print(ch+" ");
+			}
+			System.out.println();
+			if(i<3)
+			{
+				ch++;
+			}
+			else
+			{
+				ch--;
+			}				
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question21.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question21
+ A A A A A
+  B B B B
+   C C C
+    B B
+     A
+
+******************************************************************************
+
+
+22.
+E D C B A
+ D C B A
+  C B A
+   B A
+    A
+
+Code:
+ublic class Question22
+{
+	public static void main(String arg[])
+	{
+		char ch = 'E';
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch1 = ch;
+			for(int j = 1; j <= i; j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k = i; k <= 5; k++)
+			{
+				System.out.print(ch1+" ");
+				ch1--;
+			}
+			ch--;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question22.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question22
+ E D C B A
+  D C B A
+   C B A
+    B A
+     A
+
+
+*********************************************************************************
+
+23.
+    A
+   B B
+  C C C
+ D D D D
+E E E E E
+
+Code:
+
+public class Question23
+{
+	public static void main(String arg[])
+	{
+		char ch = 'A';
+		for(int i = 1; i <= 5; i++)
+		{
+			for(int j = 5; j >= i; j--)
+			{
+				System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++)
+			{
+				System.out.print(ch+" ");
+			}
+			ch++;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question23.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question23
+     A
+    B B
+   C C C
+  D D D D
+ E E E E E
+
+*******************************************************************************
+
+24.
+    A
+   A B
+  A B C
+ A B C D
+A B C D E
+
+Code:
+
+public class Question24
+{
+	public static void main(String arg[])
+	{
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch = 'A';
+			for(int j = 5; j >= i; j--)
+			{
+				System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++)
+			{
+				System.out.print(ch+" ");
+				ch++;
+			}
+			System.out.println();
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question24.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question24
+     A
+    A B
+   A B C
+  A B C D
+ A B C D E
+
+
+*****************************************************************************
+
+25.
+
+E E E E E
+ D D D D
+  C C C
+   B B
+    A
+
+Code:
+public class Question25
+{
+	public static void main(String arg[])
+	{
+		char ch = 'E';
+		for(int i = 1; i <= 5; i++)
+		{
+			for(int j = 1; j <= i; j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k = i; k <= 5; k++)
+			{
+				System.out.print(ch+" ");
+			}
+			ch--;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question25.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question25
+ E E E E E
+  D D D D
+   C C C
+    B B
+     A
+
+*******************************************************************************
+
+26.
+A B C D E
+ A B C D
+  A B C
+   A B
+    A
+
+Code:
+
+public class Question26
+{
+	public static void main(String arg[])
+	{
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch = 'A';
+			for(int j = 1; j <= i; j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k = i; k <= 5; k++)
+			{
+				System.out.print(ch+" ");
+				ch++;
+			}
+			System.out.println();
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question26.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question26
+ A B C D E
+  A B C D
+   A B C
+    A B
+     A
+
+
+*******************************************************************************
+
+27.
+E D C B A
+ D C B A
+  C B A
+   B A
+    A
+
+Code:
+public class Question27
+{
+	public static void main(String arg[])
+	{
+		char ch = 'E';
+		for(int i = 1; i <= 5; i++)
+		{
+			char ch1 = ch;
+			for(int j = 1; j <= i; j++)
+			{
+				System.out.print(" ");
+			}
+			for(int k = i; k <= 5; k++)
+			{
+				System.out.print(ch1+" ");
+				ch1--;
+			}
+			ch--;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question27.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question27
+ E D C B A
+  D C B A
+   C B A
+    B A
+     A
+
+*******************************************************************************
+
+28.  
+    A
+   BBB
+  CCCCC
+ DDDDDDD
+EEEEEEEEE
+
+Code:
+public class Question28
+{
+	public static void main(String arg[])
+	{
+		char ch = 'A';
+		for(int i = 1; i <= 5; i++)
+		{
+			for(int j = 5; j >= i; j--)
+			{
+				System.out.print(" ");
+			}
+			for(int k = 1; k <= i; k++)
+			{
+				System.out.print(ch);
+				
+			}
+			for(int l = 2; l <= i; l++)
+			{
+				System.out.print(ch);
+			}
+			ch++;
+			System.out.println();
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>javac Question28.java
+
+C:\Users\shubh\work\Codenera\Java\AlphabetPattern\Assignment>java Question28
+     A
+    BBB
+   CCCCC
+  DDDDDDD
+ EEEEEEEEE
+
+
+
+
+
+
+
+
+
+
+

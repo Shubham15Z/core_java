@@ -1,0 +1,1157 @@
+1. Maximum bet two numbers
+
+Code:
+import java.util.Scanner;
+
+public class Maximum
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the 1st number n1: ");
+		int n1 = sc.nextInt();
+		System.out.println("Enter the 2nd number n2: ");
+		int n2 = sc.nextInt();
+
+		if(n1>n2)
+		{
+			System.out.println("The maximum between two number is: "+n1);
+		}
+		else
+		{
+			System.out.println("The maximum between two number is: "+n2);
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java Maximum
+Enter the 1st number n1:
+5
+Enter the 2nd number n2:
+67
+The maximum between two number is: 67
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java Maximum
+Enter the 1st number n1:
+-37
+Enter the 2nd number n2:
+8
+The maximum between two number is: 8
+
+
+**********
+
+
+2. Maximum between three numbers:
+
+Code:
+
+import java.util.Scanner;
+
+public class MaximumThree
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the 1st number n1: ");
+		int n1 = sc.nextInt();
+		System.out.println("Enter the 2nd number n2: ");
+		int n2 = sc.nextInt();
+		System.out.println("Enter the 3rd number n3: ");
+		int n3 = sc.nextInt();
+
+		if(n1>n2 && n1>n3)
+		{
+			System.out.println("The maximum between three number is: "+n1);
+		}
+		else if(n2>n3)
+		{
+			System.out.println("The maximum between three number is: "+n2);
+		}
+		else
+		{
+			System.out.println("The maximum between three number is: "+n3);
+		}
+	}
+}
+
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java MaximumThree
+Enter the 1st number n1:
+56
+Enter the 2nd number n2:
+3
+Enter the 3rd number n3:
+68
+The maximum between three number is: 68
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java MaximumThree
+Enter the 1st number n1:
+37
+Enter the 2nd number n2:
+-45
+Enter the 3rd number n3:
+3
+The maximum between three number is: 37
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java MaximumThree
+Enter the 1st number n1:
+34
+Enter the 2nd number n2:
+87
+Enter the 3rd number n3:
+-2
+The maximum between three number is: 87
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>
+
+
+************
+
+
+3. Check number is positive or negative:
+
+Code:
+import java.util.Scanner;
+
+public class PositiveNegative
+{	
+	public static void main(String[] arg)
+	{	
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int n = sc.nextInt();
+		if(n>0)
+		{
+			System.out.println("The number is positive");
+		}
+		else if(n<0)
+		{
+			System.out.println("The number is negative");
+		}
+		else
+		{
+			System.out.println("The number is zero 0");
+		}
+	}
+}
+
+output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java PositiveNegative
+Enter a number:
+5
+The number is positive
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java PositiveNegative
+Enter a number:
+-2
+The number is negative
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java PositiveNegative
+Enter a number:
+0
+The number is zero 0
+
+
+************
+
+
+4. Divisible by 5 and 11
+
+Code:
+import java.util.Scanner;
+
+public class Divisible
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number n1: ");
+		int n1 = sc.nextInt();
+		
+		if((n1%5) == 0 && (n1%11) == 0)
+		{
+			System.out.println("The number is divisible by both 5 and 11");
+		}
+		else if((n1%5) == 0)
+		{
+			System.out.println("The number is divisible by 5");
+		}
+		else if((n1%11) == 0)
+		{
+			System.out.println("The number is divisible by 11");
+		}
+		else
+		{
+			System.out.println("The number is not divisible by both");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java Divisible
+Enter the number n1:
+45
+The number is divisible by 5
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java Divisible
+Enter the number n1:
+55
+The number is divisible by both 5 and 11
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java Divisible
+Enter the number n1:
+77
+The number is divisible by 11
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java Divisible
+Enter the number n1:
+58
+The number is not divisible by both
+
+
+************
+
+
+5. Check number is even or odd
+
+Code:
+
+import java.util.Scanner;
+
+public class EvenOdd
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number n1: ");
+		int n1 = sc.nextInt();
+		
+		if(n1>=0 && n1%2 == 0)
+		{
+			System.out.println("The number is Even");
+		}
+		else if(n1<0)
+		{
+			System.out.println("Enter positive number");
+		}
+		else
+		{
+			System.out.println("The number is Odd");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java EvenOdd
+Enter the number n1:
+-45
+Enter positive number
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java EvenOdd
+Enter the number n1:
+34
+The number is Even
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java EvenOdd
+Enter the number n1:
+5
+The number is Odd
+
+
+************
+
+
+6. Check year is leap or not
+
+Code:
+import java.util.Scanner;
+
+public class LeapYear
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the year: ");
+		int n1 = sc.nextInt();
+		
+		if(n1%400 == 0)
+		{
+			System.out.println("The year is leap year");
+		}
+		else if(n1%4 == 0 && n1%100 !=0)
+		{
+			System.out.println("The year is leap year");
+		}
+		else
+		{
+			System.out.println("The year is not leap year");
+		}
+	}
+}
+
+output:
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java LeapYear
+Enter the year:
+1700
+The year is not leap year
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java LeapYear
+Enter the year:
+1600
+The year is leap year
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java LeapYear
+Enter the year:
+1996
+The year is leap year
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java LeapYear
+Enter the year:
+2003
+The year is not leap year
+
+
+************
+
+
+7. Check albhabet or not
+
+Code:
+import java.util.Scanner;
+
+public class CheckAlphabet
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Alphabet: ");
+		char ch = sc.next().charAt(0);
+		
+		if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+		{
+			System.out.print("It is an Alphabte");
+		}
+		else
+		{
+			System.out.print("It is not an Alphabte");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckAlphabet
+Enter the Alphabet:
+f
+It is an Alphabte
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckAlphabet
+Enter the Alphabet:
+#
+It is not an Alphabte
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckAlphabet
+Enter the Alphabet:
+B
+It is an Alphabte
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckAlphabet
+Enter the Alphabet:
+?
+It is not an Alphabte
+
+
+************
+
+
+8.
+
+Code:
+import java.util.Scanner;
+
+public class VowelConsonant
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Alphabet: ");
+		char ch = sc.next().charAt(0);
+		
+		if(ch == 'A' || ch == 'E'|| ch == 'I' || ch == 'O' || ch == 'U' || ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+		{
+			System.out.println("It is a vowel");
+		}
+		else
+		{
+			System.out.println("It is not an vowel");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java VowelConsonant
+Enter the Alphabet:
+e
+It is a vowel
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java VowelConsonant
+Enter the Alphabet:
+y
+It is not an vowel
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java VowelConsonant
+Enter the Alphabet:
+i
+It is a vowel
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>
+C:\Users\shubh\work\Codenera\Java\controlStatements>java VowelConsonant
+Enter the Alphabet:
+L
+It is not an vowel
+
+
+***************
+
+
+9. Check Alphabet, digit or special character
+
+Code:
+import java.util.Scanner;
+
+public class CheckAlphabetDigitSpecialChar
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Character:");
+		char ch = sc.next().charAt(0);
+		
+		if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+		{
+			System.out.println("It is an Alphabet");
+		}
+		else if(ch >= '0' && ch <= '9')
+		{
+			System.out.println("It is a Digit");
+		}
+		else
+		{
+			System.out.println("It is a Special Character");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckAlphabetDigitSpecialChar
+Enter a Character:
+f
+It is an Alphabet
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckAlphabetDigitSpecialChar
+Enter a Character:
+A
+It is an Alphabet
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckAlphabetDigitSpecialChar
+Enter a Character:
+4
+It is a Digit
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckAlphabetDigitSpecialChar
+Enter a Character:
+#
+It is a Special Character
+
+
+**********
+
+
+10. Check uppercase lowercase
+
+Code:
+import java.util.Scanner;
+
+public class UppercaseLowerCase
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter an Alphabet:");
+		char ch = sc.next().charAt(0);
+		
+		if(ch>='A' && ch<='Z')
+		{
+			System.out.println("It is in Uppercase");
+		}
+		else if(ch>='a' && ch<='z')
+		{
+			System.out.println("It is in Lowercase");
+		}
+		else
+		{
+			System.out.println("It is not a Alphabet");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java UppercaseLowerCase
+Enter an Alphabet:
+g
+It is in Lowercase
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java UppercaseLowerCase
+Enter an Alphabet:
+W
+It is in Uppercase
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java UppercaseLowerCase
+Enter an Alphabet:
+4
+It is not a Alphabet
+
+
+***********
+
+
+11. Week day
+
+Code:
+import java.util.Scanner;
+
+public class WeekDay
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the week number:");
+		int n1 = sc.nextInt();
+		
+		if(n1 == 1)
+		{
+			System.out.println("Monday");
+		}
+		else if(n1 == 2)
+		{
+			System.out.println("Tuesday");
+		}
+		else if(n1 == 3)
+		{
+			System.out.println("Wednsday");
+		}
+		else if(n1 == 4)
+		{
+			System.out.println("Thursday");
+		}
+		else if(n1 == 5)
+		{
+			System.out.println("Friday");
+		}
+		else if(n1 == 6)
+		{
+			System.out.println("Saturday");
+		}
+		else if(n1 == 7)
+		{
+			System.out.println("Sunday");
+		}
+		else 
+		{
+			System.out.print("Enter valid week number");
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java WeekDay
+Enter the week number:
+4
+Thursday
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java WeekDay
+Enter the week number:
+5
+Friday
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java WeekDay
+Enter the week number:
+1
+Monday
+
+
+********************
+
+
+12.
+
+Code:
+import java.util.Scanner;
+
+public class Month
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the month number:");
+		int n1 = sc.nextInt();
+		
+		if(n1 == 1)
+		{
+			System.out.println("January");
+		}
+		else if(n1 == 2)
+		{
+			System.out.println("February");
+		}
+		else if(n1 == 3)
+		{
+			System.out.println("March");
+		}
+		else if(n1 == 4)
+		{
+			System.out.println("April");
+		}
+		else if(n1 == 5)
+		{
+			System.out.println("May");
+		}
+		else if(n1 == 6)
+		{
+			System.out.println("June");
+		}
+		else if(n1 == 7)
+		{
+			System.out.println("July");
+		}
+		else if(n1 == 8)
+		{
+			System.out.println("August");
+		}
+		else if(n1 == 9)
+		{
+			System.out.println("September");
+		}
+		else if(n1 == 10)
+		{
+			System.out.println("October");
+		}
+		else if(n1 == 11)
+		{
+			System.out.println("November");
+		}
+		else if(n1 == 12)
+		{
+			System.out.println("December");
+		}
+		else 
+		{
+			System.out.print("Enter valid Month number");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java Month
+Enter the month number:
+4
+April
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java Month
+Enter the month number:
+8
+August
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java Month
+Enter the month number:
+10
+October
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java Month
+Enter the month number:
+12
+December
+
+
+**************
+
+
+13.
+Code:
+import java.util.Scanner;
+
+public class NumberOfNotes
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Amount:");
+		int amt = sc.nextInt();
+		int n500, n200, n100, n50,  n10;
+		n500 = n200 = n100 = n50 =  n10 = 0;
+
+		if(amt>=500)
+		{
+			n500 = amt/500;
+			amt = amt%500;
+		};
+		if(amt>=200)
+		{
+			n200 = amt/200;
+			amt = amt%200;
+		};
+		if(amt>=100)
+		{
+			n100 = amt/100;
+			amt = amt%100;
+		};
+		if(amt>=50)
+		{
+			n50 = amt/50;
+			amt = amt%50;
+		};
+		if(amt>=10)
+		{
+			n10 = amt/10;
+			amt = amt%10;
+		};
+		System.out.println("Total Number of Notes");
+		System.out.println("500 = "+ n500);
+		System.out.println("200 = "+ n200);
+		System.out.println("100 = "+ n100);
+		System.out.println("50 = "+ n50);
+		System.out.println("10 = "+ n10);
+	}
+}
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java NumberOfNotes
+Enter the Amount:
+587
+Total Number of Notes
+500 = 1
+200 = 0
+100 = 0
+50 = 1
+10 = 3
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java NumberOfNotes
+Enter the Amount:
+890
+Total Number of Notes
+500 = 1
+200 = 1
+100 = 1
+50 = 1
+10 = 4
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java NumberOfNotes
+Enter the Amount:
+89765
+Total Number of Notes
+500 = 179
+200 = 1
+100 = 0
+50 = 1
+10 = 1
+
+
+****************
+
+
+14.
+Code:
+import java.util.Scanner;
+
+public class CheckTriangle
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the 1st angle:");
+		int n1 = sc.nextInt();
+		System.out.println("Enter the 2nd angle:");
+		int n2 = sc.nextInt();
+		System.out.println("Enter the 3rd angle:");
+		int n3 = sc.nextInt();
+		
+		if(n1>0 && n2>0 && n3>0)
+		{
+			if(n1+n2+n3 == 180)
+			{
+				System.out.println("Triangle is valid");
+			}
+			else
+			{
+				System.out.println("Triangle is not valid");
+			}
+		}
+		else
+		{
+			System.out.println("Triangle is not valid");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckTriangle
+Enter the 1st angle:
+45
+Enter the 2nd angle:
+5
+Enter the 3rd angle:
+6
+Triangle is not valid
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckTriangle
+Enter the 1st angle:
+90
+Enter the 2nd angle:
+45
+Enter the 3rd angle:
+45
+Triangle is valid
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckTriangle
+Enter the 1st angle:
+0
+Enter the 2nd angle:
+4
+Enter the 3rd angle:
+6
+Triangle is not valid
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>
+
+
+***************
+
+
+15.
+Code:
+import java.util.Scanner;
+
+public class CheckTriangleOnSide
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the 1st side:");
+		int n1 = sc.nextInt();
+		System.out.println("Enter the 2nd side:");
+		int n2 = sc.nextInt();
+		System.out.println("Enter the 3rd side:");
+		int n3 = sc.nextInt();
+		
+		if((n1+n2 > n3) && (n2+n3 > n1) && (n3+n1 > n2))
+		{
+			System.out.println("Triangle is valid");
+		}
+		else
+		{
+			System.out.println("Triangle is not valid");
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckTriangleOnSide
+Enter the 1st side:
+4
+Enter the 2nd side:
+5
+Enter the 3rd side:
+3
+Triangle is valid
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckTriangleOnSide
+Enter the 1st side:
+0
+Enter the 2nd side:
+7
+Enter the 3rd side:
+9
+Triangle is not valid
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckTriangleOnSide
+Enter the 1st side:
+2
+Enter the 2nd side:
+3
+Enter the 3rd side:
+5
+Triangle is not valid
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckTriangleOnSide
+Enter the 1st side:
+1
+Enter the 2nd side:
+1
+Enter the 3rd side:
+1
+Triangle is valid
+
+
+***************
+
+
+16.
+
+Code:
+import java.util.Scanner;
+
+public class CheckTriangleType
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the 1st side:");
+		int n1 = sc.nextInt();
+		System.out.println("Enter the 2nd side:");
+		int n2 = sc.nextInt();
+		System.out.println("Enter the 3rd side:");
+		int n3 = sc.nextInt();
+		
+		if(n1==n2 && n2==n3)
+		{
+			System.out.println("Equilateral Triangle");
+		}
+		else if(n1==n2 || n2==n3 || n1==n3)
+		{
+			System.out.println("Isosceles Triangle");
+		}
+		else
+		{
+			System.out.println("Scalene Triangle");
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckTriangleType
+Enter the 1st side:
+4
+Enter the 2nd side:
+4
+Enter the 3rd side:
+4
+Equilateral Triangle
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckTriangleType
+Enter the 1st side:
+2
+Enter the 2nd side:
+4
+Enter the 3rd side:
+5
+Scalene Triangle
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java CheckTriangleType
+Enter the 1st side:
+1
+Enter the 2nd side:
+5
+Enter the 3rd side:
+5
+Isosceles Triangle
+
+
+*********************
+
+
+18.
+Code:
+import java.util.Scanner;
+
+public class ProfitLoss
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Cost Price:");
+		double cp = sc.nextDouble();
+		System.out.println("Enter the Selling Price:");
+		double sp = sc.nextDouble();
+		double p,l;
+
+		if(sp>cp)
+		{
+			p = (sp-cp)/cp*100;
+			System.out.println("Profit: "+p+"%");
+		}
+		else if(cp>sp)
+		{
+			l = (cp-sp)/cp*100;
+			System.out.println("Loss: "+l+"%");
+		}
+		else
+		{
+			System.out.println("No Profit No Loss");
+		}
+	}
+}
+
+Output:
+Enter the Cost Price:
+500
+Enter the Selling Price:
+550
+Profit: 10.0%
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java ProfitLoss
+Enter the Cost Price:
+50
+Enter the Selling Price:
+30
+Loss: 40.0%
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java ProfitLoss
+Enter the Cost Price:
+5
+Enter the Selling Price:
+5
+No Profit No Loss
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>
+
+
+********************
+
+19.
+
+Code:
+import java.util.Scanner;
+
+public class PercentageGrade
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the marks in Physics:");
+		int n1 = sc.nextInt();
+		System.out.println("Enter the marks in Chemistry:");
+		int n2 = sc.nextInt();
+		System.out.println("Enter the marks in Biology:");
+		int n3 = sc.nextInt();
+		System.out.println("Enter the marks in Mathematics");
+		int n4 = sc.nextInt();
+		System.out.println("Enter the marks in Computer:");
+		int n5 = sc.nextInt();
+		
+		int p = (n1+n2+n3+n4+n5)/5;
+		if(p >= 90)
+		{
+			System.out.println("Grade A : "+p+"%");
+		}
+		else if(p>=80 && p<90)
+		{
+			System.out.println("Grade B : "+p+"%");
+		}
+		else if(p>=70 && p<80)
+		{
+			System.out.println("Grade c : "+p+"%");
+		}
+		else if(p>=60 && p<70)
+		{
+			System.out.println("Grade D : "+p+"%");
+		}
+		else if(p>=40 && p<60)
+		{
+			System.out.println("Grade E : "+p+"%");
+		}
+		else
+		{
+			System.out.println("Grade F : "+p+"%");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java PercentageGrade
+Enter the marks in Physics:
+67
+Enter the marks in Chemistry:
+89
+Enter the marks in Biology:
+87
+Enter the marks in Mathematics
+90
+Enter the marks in Computer:
+67
+Grade B : 80%
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java PercentageGrade
+Enter the marks in Physics:
+89
+Enter the marks in Chemistry:
+23
+Enter the marks in Biology:
+45
+Enter the marks in Mathematics
+67
+Enter the marks in Computer:
+21
+Grade E : 49%
+
+
+*****************
+
+20.
+
+Code:
+import java.util.Scanner;
+
+public class GrossSalary
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Salary:");
+		int sal = sc.nextInt();
+		int grosssal = 0;
+
+		if(sal>0 && sal<=10000)
+		{
+			grosssal = sal + (sal*20/100) + (sal*80/100);
+			System.out.println("Gross salary is : "+grosssal);
+		}
+		else if(sal>10000 && sal<=20000)
+		{
+			grosssal = sal + (sal*25/100) + (sal*90/100);
+			System.out.println("Gross salary is : "+grosssal);
+		}else if(sal>20000)
+		{
+			grosssal = sal + (sal*30/100) + (sal*95/100);
+			System.out.println("Gross salary is : "+grosssal);
+		}
+		else
+		{
+			System.out.println("Enter Valid salary");
+		}
+	}
+}
+Output:
+C:\Users\shubh\work\Codenera\Java\controlStatements>java GrossSalary
+Enter the Salary:
+4000
+Gross salary is : 8000
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java GrossSalary
+Enter the Salary:
+-5000
+Enter Valid salary
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java GrossSalary
+Enter the Salary:
+16000
+Gross salary is : 34400
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>java GrossSalary
+Enter the Salary:
+24000
+Gross salary is : 54000
+
+C:\Users\shubh\work\Codenera\Java\controlStatements>

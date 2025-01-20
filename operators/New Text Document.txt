@@ -1,0 +1,7 @@
+class Operator 
+{
+	public static void main(String[] arg)
+	{
+		system.out.println(45%2);
+	}
+}

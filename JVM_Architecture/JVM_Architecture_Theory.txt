@@ -1,0 +1,114 @@
+Some ternimologies :
+JDK :-
+-JDK stands for ->Java deveolpment kit.
+-It is a software package which we need to download  and install in the system in order to develope java applications.
+
+-JDK consist of JRE and development tools such as compiler and debugger.
+
+
+________________________________________________________________________
+
+JRE :-
+Stands for Java Runtime Environment.
+It provides runtime envirnments to the java applications.
+it consist of JVM and class libraries.
+
+________________________________________________________________________
+
+JVM :
+Java virtual machine.
+it converts .class file(byte code) into machine code
+JVM is an abstract machine 
+JVM consist of 
+Class loaders subsystem
+Memory Areas
+Execution Engine.
+
+_______________________________________________________________________
+
+
+JVM Acrchitechture :
+
+--Compiler will complie the source code (.java file) and create the byte code(.class file).
+
+--This .class file will goes to the JVM.
+
+--JVM consist of three parts  1. Class loader subsystem 2.Memory Areas  3. Execution Engine
+
+-->1. class loader subsystem. 1.Loading 2.Linking 3.Initialization.
+
+
+-->Loading:->
+    In this there are three types of class loaders 
+	1.Bootstrap classloader 
+	2.Extention class loader
+	3.Application/System class loader
+
+-->Bootstrap -> It will load the classes from rt.jar file 
+-->Extention -> It will load files and classes from extention directories.
+-->Apllication/ System->It will the classes or files from class path mentioned in enviornment variables
+
+
+1. Bootstrap class loader: 
+   It is a parent class loader,It loads classes from rt.jar file (rt means runtime jar files).
+
+2. extension class loader :
+   It child class of the bootstrap class loader.
+   It loads all the jar files from the Extention folder.
+   i.e. C:\Program Files\Java\jdk-21\lib
+
+3. Application classloader: It is a child class of extension class loader.
+   It loads the file path from the environment variable...
+ 
+
+2. Linking :
+   It is divided into three parts
+
+	1 Verify: It checks the byte code. whether the byte code is correct or not. If the byte code is not correct then it gives an error.
+
+	2. Prepare: It is used to assign the default values to static variables.
+
+	3. Resolve: All the symbolic references get replaced by actual references.
+
+
+
+3. initialization. It is used to get the actual value of static variables. static and block will be executed...
+
+
+______________________________________________________________
+2. Memory areas /RunTime Data areas: It is divided into 5 parts
+
+1. Method area:
+	
+	 All the class-level data will be stored in the Method area.
+	 class name imidiate parent class name, information about varible method and constructors.
+  	 There is only one method area as per JVM.
+
+2. Heap Area:  All the objects are stored in the Heap Area. (Arrays, String,instance of class)
+              All global variable is stored in this area.
+              There is only one heap Area as per JVM.
+
+3. Stack Area: 
+             Local variables are also stored in this area.
+             Every thread has a separate stack area.
+
+4. PC Register: It stores the address of current execution instructions.
+		  There is separate Pc Regi for each thread
+
+5. native method stack: It stores the native method information.
+
+_______________________________________________________
+3. Execution engine : 
+
+1. Interpreter: interpret the byte code line by line. If it found the repeated code then it passes to the JIT compiler.
+
+2. JIT compiler :(Just-In-Time) It compiles the given code at a time compilation and converts it to the native code. 
+                  Native code is the machine-understandable code i.e. understood by JVM
+3. Garbage collector: It destroys unwanted objects. It is used to clean the memory. It automatically invokes.
+When you want to invoke the garbage collection manually it will use System.gc() method.
+   
+native method interface: 
+		It acts as a mediator between the Execution engine and Native method Libraries.
+		It provides native methods from native method libraries to execute our code.
+
+native method libraries:  It is the collection of native methods. 

@@ -1,0 +1,554 @@
+1. Write a program to input an n-digit number and print each digit on a new line.
+
+Code:
+
+import java.util.Scanner;
+
+public class PrintDigit
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a  number: ");
+		int n = sc.nextInt();
+		
+		int i = n, rem;
+		System.out.println("The Digits are: ");
+		while(i > 0)
+		{
+			rem = i % 10;
+			System.out.println(rem);
+			i = i / 10;
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java PrintDigit
+Enter a  number:
+8745623
+The Digits are:
+3
+2
+6
+5
+4
+7
+8
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java PrintDigit
+Enter a  number:
+78345
+The Digits are:
+5
+4
+3
+8
+7
+
+
+__________________________________________________________
+
+
+   
+2. Create a function that takes an n-digit number as input and returns the sum of its digits.
+
+Code:
+
+import java.util.Scanner;
+
+public class SumOfDigit
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a  number: ");
+		int n = sc.nextInt();
+		
+		int i = n, rem, sum = 0;
+		System.out.println("  ");
+		while(i > 0)
+		{
+			rem = i % 10;
+			sum = sum + rem;
+			i = i / 10;
+		}
+		System.out.println("Sum of digits is : "+sum);
+	}
+}
+
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java SumOfDigit
+Enter a  number:
+456
+
+Sum of digits is : 15
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java SumOfDigit
+Enter a  number:
+389
+
+Sum of digits is : 20
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java SumOfDigit
+Enter a  number:
+121
+
+Sum of digits is : 4
+
+
+_____________________________________________________________________________________
+
+
+3. Write a program to count the number of even and odd digits in an n-digit number.
+Code:
+
+import java.util.Scanner;
+
+public class CountEvenOddDigit
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a  number: ");
+		int n = sc.nextInt();
+		
+		int i = n, rem, evenCount = 0, oddCount = 0;
+		System.out.println("  ");
+		while(i > 0)
+		{
+			rem = i % 10;
+			//System.out.println(rem);
+			if(rem % 2 == 0)
+			{
+				evenCount++;
+			}
+			else
+			{
+				oddCount++;
+			}
+			i = i / 10;
+		}
+		System.out.println("Even digit count is : "+evenCount);
+		System.out.println("Odd digit count is : "+oddCount);
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java CountEvenOddDigit
+Enter a  number:
+57834
+
+Even digit count is : 2
+Odd digit count is : 3
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java CountEvenOddDigit
+Enter a  number:
+4782294
+
+Even digit count is : 5
+Odd digit count is : 2
+
+
+________________________________________________________________________________________________
+
+
+
+4. Develop a function that reverses the digits of an n-digit number.
+
+Code:
+import java.util.Scanner;
+
+public class ReverseDigit
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a  number: ");
+		int n = sc.nextInt();
+		
+		int i = n, rem, rev = 0;
+		while(i > 0)
+		{
+			rem = i % 10;
+			rev = rev * 10 + rem;
+			i = i / 10;
+		}
+		System.out.println("The reverse is :"+rev);
+		
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java ReverseDigit
+Enter a  number:
+1234
+The reverse is :4321
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java ReverseDigit
+Enter a  number:
+676
+The reverse is :676
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java ReverseDigit
+Enter a  number:
+8907
+The reverse is :7098
+
+
+_________________________________________________________________________________________
+
+
+5. Write a program that takes an n-digit number and displays its digits in reverse order, separated by commas.
+
+Code:
+import java.util.Scanner;
+
+public class PrintDigitComma
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a  number: ");
+		int n = sc.nextInt();
+		
+		int i = n, rem;
+		System.out.println("The Digits are: ");
+		while(i > 0)
+		{
+			rem = i % 10;
+			System.out.print(rem+",");
+			i = i / 10;
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java PrintDigitComma
+Enter a  number:
+47582
+The Digits are:
+2,8,5,7,4,
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java PrintDigitComma
+Enter a  number:
+689403
+The Digits are:
+3,0,4,9,8,6,
+
+_____________________________________________________
+
+
+6. Write a function to find the largest and smallest digits in an n-digit number.
+Code:
+import java.util.Scanner;
+
+public class LargestSmallestDigit
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a  number: ");
+		int n = sc.nextInt();
+		
+		int i = n, rem, max = 0, min = 9;
+		System.out.println("  ");
+		while(i > 0)
+		{
+			rem = i % 10;
+			if(rem > max)
+			{
+				max = rem;
+			}
+			else if(rem < min)
+			{
+				min = rem;
+			}
+			i = i / 10;
+		}
+		System.out.println("Largest Digit is : "+max);
+		System.out.println("Smallest digit is : "+min);
+	}
+}
+
+output:
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java LargestSmallestDigit
+Enter a  number:
+578396
+
+Largest Digit is : 9
+Smallest digit is : 3
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java LargestSmallestDigit
+Enter a  number:
+679041
+
+Largest Digit is : 9
+Smallest digit is : 0
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java LargestSmallestDigit
+Enter a  number:
+4321320
+
+Largest Digit is : 4
+Smallest digit is : 0
+
+
+_____________________________________________________________________________________________
+
+
+
+7. Create a program to find the product of all non-zero digits in an n-digit number.
+
+Code:
+import java.util.Scanner;
+
+public class MultiplicationOfDigit
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a  number: ");
+		int n = sc.nextInt();
+		
+		int i = n, rem, multi = 1;
+		System.out.println("The Digits are: ");
+		while(i > 0)
+		{
+			rem = i % 10;
+			System.out.println(rem);
+			if(rem > 0)
+			{
+				multi = multi * rem;
+			}
+			i = i / 10;
+		}
+		System.out.println("Multiplication of all the digits is : "+multi);
+	}
+}
+
+output:
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java MultiplicationOfDigit
+Enter a  number:
+275
+The Digits are:
+5
+7
+2
+Multiplication of all the digits is : 70
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java MultiplicationOfDigit
+Enter a  number:
+8906
+The Digits are:
+6
+0
+9
+8
+Multiplication of all the digits is : 432
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java MultiplicationOfDigit
+Enter a  number:
+590
+The Digits are:
+0
+9
+5
+Multiplication of all the digits is : 45
+
+
+_______________________________________________________________________________________________
+
+
+8. Write a program that takes an n-digit number and checks if it is a palindrome.
+
+Code:
+
+import java.util.Scanner;
+
+public class PallindreomeNumber
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a  number: ");
+		int n = sc.nextInt();
+		
+		int i = n, rem, rev = 0;
+		while(i > 0)
+		{
+			rem = i % 10;
+			rev = rev * 10 + rem;
+			i = i / 10;
+		}
+		if(rev == n)
+		{
+			System.out.println("The number is pallindrome.");
+		}
+		else
+		{
+			System.out.println("The number is not pallindrome.");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java PallindreomeNumber
+Enter a  number:
+4738
+The number is not pallindrome.
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java PallindreomeNumber
+Enter a  number:
+48584
+The number is pallindrome.
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java PallindreomeNumber
+Enter a  number:
+2840
+The number is not pallindrome.
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java PallindreomeNumber
+Enter a  number:
+555
+The number is pallindrome.
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java PallindreomeNumber
+Enter a  number:
+9009
+The number is pallindrome.
+
+
+__________________________________________________________________________________________________
+
+
+9. Develop a program to calculate the difference between the sum of the even-positioned and odd-positioned digits of an n-digit number.
+
+Code:
+
+import java.util.Scanner;
+
+public class DiffEvenOddPositionDigit
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a  number: ");
+		int n = sc.nextInt();
+		
+		int i = n, rem, evenSum = 0, oddSum = 0, count = 1;
+		while(i > 0)
+		{
+			rem = i % 10;
+			if(count % 2 == 0)
+			{
+				evenSum = evenSum + rem;
+			}
+			else
+			{
+				oddSum = oddSum + rem;
+			}
+			i = i / 10;
+			count++;
+		}
+		System.out.println("Even position sum is : "+evenSum);
+		System.out.println("Odd position sum is : "+oddSum);
+		System.out.println("Difference of sum is : "+(oddSum-evenSum));
+	}
+}
+
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java DiffEvenOddPositionDigit
+Enter a  number:
+456
+Even position sum is : 5
+Odd position sum is : 10
+Difference of sum is : 5
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java DiffEvenOddPositionDigit
+Enter a  number:
+570
+Even position sum is : 7
+Odd position sum is : 5
+Difference of sum is : -2
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java DiffEvenOddPositionDigit
+Enter a  number:
+4672950
+Even position sum is : 13
+Odd position sum is : 20
+Difference of sum is : 7
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java DiffEvenOddPositionDigit
+Enter a  number:
+9857
+Even position sum is : 14
+Odd position sum is : 15
+Difference of sum is : 1
+
+
+________________________________________________________________________________________________
+
+
+10. Write a function that takes an n-digit number and returns the count of digits greater than a specified value.
+
+Code:
+import java.util.Scanner;
+
+public class CountSpecifiedDigit
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a  number: ");
+		int n = sc.nextInt();
+		System.out.println("Enter a specific digit :");
+		int d = sc.nextInt();
+
+		int i = n, rem, count = 0;
+		System.out.println("  ");
+		while(i > 0)
+		{
+			rem = i % 10;
+			if(rem > d)
+			{
+				count++;
+			}
+			i = i / 10;
+		}
+		System.out.println("The count of digits greater than specified digit is: "+count);
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java CountSpecifiedDigit
+Enter a  number:
+364719
+Enter a specific digit :
+3
+
+The count of digits greater than specified digit is: 4
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java CountSpecifiedDigit
+Enter a  number:
+5738
+Enter a specific digit :
+9
+
+The count of digits greater than specified digit is: 0
+
+C:\Users\shubh\work\Codenera\Java\Break_n_Digit_Number_Assignment>java CountSpecifiedDigit
+Enter a  number:
+46960
+Enter a specific digit :
+7
+
+The count of digits greater than specified digit is: 1
+
+
+

@@ -1,0 +1,10 @@
+/*
+Difference between entry controlled loop and exit control loop
+
+Entry controlled loop - While loop
+Exit controlled loop - do while loop
+
+- Even though condition is false do-while loop will gets execute 1 time
+- But while loop will not execute if condition i false; 
+
+*/

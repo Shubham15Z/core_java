@@ -1,0 +1,20 @@
+for loop:
+
+syntax :
+
+	for(inititalisation/Declaration; condition; inc/dec)
+	{
+		Statement/Body of loop
+	}
+
+//1 2 3 4 5
+
+for(int i = 1; i <= 5; i++)
+{
+	System.out.println(i);
+}
+
+Step 1: initialization
+step 2: condition
+step 3: statements
+step 4: increment

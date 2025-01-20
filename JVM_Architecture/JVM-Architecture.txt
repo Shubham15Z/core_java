@@ -1,0 +1,185 @@
+What is Java
+Java is a technology which provides two things one is programming language and 
+other is platform. By using programming language we can develop java application
+and provide environment or platform by using JRE and JVM.  
+
+Features
+It comes with different features such as
+platform independent, portable, secure, object oriented, robust, multithreaded,
+simple, distributed etc
+
+
+History
+James Gosling and his team developed java, firstly it was called Greentalk
+and then called as Oak. Then in 1995 it was renamed as Java.
+
+Application
+4 types of applications can be created using JAVA as
+1) Standalone application or Desktop application
+2) Web Application
+3) Enterprise Application
+4) Mobile Application 
+
+Edition
+There are 4 platforms or editions of java as
+1)Java SE 
+2)Java EE
+3)Java ME
+4)Java FX
+
+Java consist of JDK = JRE + development tools(javac,debugger)
+		JRE = Java Package classes, runntime libraries and JVM
+		JVM = abstract machine, 
+The compiler compiles the Java file into a
+Java .class file, then that .class file is input into the JVM, which loads and
+executes the class file
+
+JVM Architecture
+
+-3 phase are there inside JVM
+
+1) class loader subsytem
+2) memory areas
+3) execution engine
+
+1)class loader subsytem
+ :3 things happen inside here
+ - 1) loading
+ - 2) Linking
+ - 3) Initialization
+
+i)Loading:
+: bootstrap , extention, application class loader
+
+Bootstrap class loader:
+it will load/import all predefined classes inside java
+stored inside (runtime)rt.jar file
+path of rt.jar file
+
+Extension class loader:
+It will load the files from extension directory
+
+Application class loader:
+It will loads the files from class path.
+Another concept of class path is where we store the .class file
+
+
+1st request will go to application class loader, then it will send to extension class loader
+and then it will send to boostrap, after bootstrap done some work it will again send request to 
+extension and extension will send it to application.
+it is known as deligation heirarchy.
+
+ii)Linking
+verification, preparation, resolution
+
+*verification:
+check correctness of .class file.
+jvm or security manager will check byte code is made correctly or not
+
+*preparation:
+the default values for static variables get allocated and not for instance variable.
+
+*resolution:
+all the symbolic references will get replaced by original name references.
+
+
+iii) Initialization:
+The default values of static variables gets replaced by actual values.
+And static block will be executed.
+
+************************
+
+2) Memory Areas:
+
+five memory areas are present
+1) method area/ class area
+2) heap area
+3) stack area
+4) pc registers area
+5) native methods stack
+
+1) Method Area / Class Area:
+
+-All the class level data i.e. class name, immediate parent class name,
+ information about variables, methods, constructors and static variables.
+-There is only one method area per JVM.
+-It is permanent area.
+-This is shared resource.
+
+
+2)Heap Area:
+
+-All the objects gets stored inside of the heap area.
+-For ex : Instance of a class, arrays , strings etc.
+-Instance variables gets stores insde heap area.
+-Heap area is only one per JVM.
+-This is also permanent memory area.
+-This is also shared resource.
+
+
+3)Stack Area:
+-Local vaiables and local data gets stored inside the stack area.
+-For every thread there will be separate runtime stack will be created.
+-Stack area is temperory area.
+-It is not the shared resource so it is thread safe.
+
+Why local area can not be accessible outside method.?
+
+4) PC(program counter) registers:
+-There is separate pc register for each thread.
+-It stores address of currently execution instruction.
+-Once the instrution is executed it will be updated with the next instruction.
+
+
+5)Native method stack:
+-It store the native method infromation.
+-For every thread, separate native method stack will be created.
+
+
+
+*******************************************
+
+3) Execution Engine.
+Inside execution engine we have
+Interpreter, JIT compiler, Java native interface , native method libraries,
+garbage collector.
+
+The execution engine reads the bytecode and executes it piece by piece.
+
+Interpreter:
+It will interprete the bytecode line by line.
+-When a method is called multiple time or there is a repitative task, every time
+interpretation is done by it. Which makes it slower. 
+
+
+JIT(Just in time) compiler:
+So to overcome this
+-Repetative task from interpreter is handed to JIT 
+-It will make byte code into native code and use whenever it find repeated code.
+-hotspot i.e repeated task will be find by hotspot profiler.
+-so interpreter will work fast and increases its performance. 
+
+JNI - Java native Interface:
+-It will act as mediator between execution engine and native libraries.
+i.e provide native method from native method liraries to execution engine.
+
+Native Method Libraries:
+It stores the files which borrowed from C and C++
+It is the collection of native methods
+
+
+Garbage collector:
+It will destroy the unused objects.
+It is used to clean the memory.
+It will invoke automatically.
+If we want to invoke gc manually then we have to use System.gc() method
+
+
+
+
+
+
+
+
+
+

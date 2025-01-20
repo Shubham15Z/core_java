@@ -1,0 +1,80 @@
+1. int a = 5; System.out.println(a++);
+Ans = 5 
+2. int a = 5; System.out.println(++a);
+Ans = 6
+3. int a = 5; System.out.println(a--);
+Ans = 5
+4. int a = 5; System.out.println(--a);
+Ans = 4
+5. int a = 5, b = a++; System.out.println(b);
+Ans = 5
+6. int a = 5, b = ++a; System.out.println(b);
+Ans = 6
+7. int a = 5; System.out.println(a++ + a++);
+Ans = 5(6) + 6(7) = 11
+8. int a = 5; System.out.println(++a + ++a);
+Ans = (5)6 + (6)7 = 13
+9. int a = 5; System.out.println(a-- - a--);
+Ans = 5(4) - 4(3) = 1
+10. int a = 5; System.out.println(--a - --a);
+Ans = (5)4 - (4)3 = 1
+
+
+*******************************
+
+11. int a = 5, b = a++ + ++a; System.out.println(b);
+Ans = 5(6) + (6)7 = 12
+12. int a = 5, b = a-- - --a; System.out.println(b);
+Ans = 5(4) - (4)3 = 2
+13. int a = 5, b = a++ + --a; System.out.println(b);
+Ans = 5(6) + (6)5 = 10
+14. int a = 5, b = ++a - a--; System.out.println(b);
+Ans = (5)6 - 6(5) = 0
+15. int a = 5, b = a++ + a++ + ++a; System.out.println(b);
+Ans = 5(6) + 6(7) + (7)8 = 19
+16. int a = 5, b = a-- - a-- - --a; System.out.println(b);
+Ans = 5(4) - 4(3) - (3)2 = -1
+17. int a = 5, b = ++a + ++a - --a; System.out.println(b);
+Ans = (5)6 + (6)7 - (7)6 = 7
+18. int a = 5, b = a-- + ++a + a--; System.out.println(b);
+Ans = 5(4) + (4)5 + 5(4) = 15
+19. int a = 5, b = --a + a++ + a--; System.out.println(b);
+Ans = (5)4 + 4(5) + 5(4) = 13
+20. int a = 5, b = a++ - --a + ++a; System.out.println(b);
+Ans = 5(6) - (6)5 + (5)6 = 6
+
+
+
+**************************
+
+21. int a = 5, b = a++ + ++a + a-- - --a; System.out.println(b);
+Ans = 5(6) + (6)7 + 7(6) - (6)5 = 14
+22. int a = 5, b = ++a - a-- + a++ - --a; System.out.println(b);
+Ans = (5)6 - 6(5) + 5(6) - (6)5 = 0
+23. int a = 5, b = a++ * ++a - --a * a--; System.out.println(b);
+Ans = 5(6) * (6)7 - (7)6 * 6(5) = -1
+24. int a = 5, b = ++a / a++ + a-- - --a; System.out.println(b);
+Ans = (5)6 / 6(7) + 7(6) - (6)5 = 3
+25. int a = 5, b = (a++ + ++a) * (--a - a--); System.out.println(b);
+Ans = (5(6) + (6)7) * ((7)6 - 6(5)) = 0
+
+
+***************************
+
+26. 26. int a = 5, b = a++ + (++a * a--) - (--a / a++); System.out.println(b);
+Ans = 5(6) + ((6)7 * 7(6)) - ((6)5 / 5(6)) = 53
+27. int a = 5, b = (a++ - --a) * (++a + a--); System.out.println(b);
+Ans = (5(6) - (6)5) * ((5)6 + 6(5)) = 0
+28. int a = 5, b = a++ * (++a + a--) - (--a * a++); System.out.println(b);
+Ans = 5(6) * ((6)7 + 7(6)) -((6)5 * 5(6)) = 70 - 25 = 45
+29. int a = 5, b = (++a + a-- - --a) * (a++ + --a); System.out.println(b);
+Ans = ((5)6 + 6(5) - (5)4) * (4(5) + (5)4) = 8 * 8 = 64
+30. int a = 5, b = (a++ + --a - a--) / (++a - a++); System.out.println(b);
+Ans = (5(6) + (6)5 - 5(4)) / ((4)5 - 5(6))
+Denominator becomes 0 so gives error
+
+
+
+
+
+

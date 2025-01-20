@@ -1,0 +1,1235 @@
+1. Classify a person's age into child, teenager, adult, or senior.
+   - Example: If the age is 15, the output should be "Teenager."
+
+Code:
+import java.util.Scanner;
+
+public class PersonAge
+{
+	public static void main(String args[])
+	{	
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your age please: ");
+		int age = sc.nextInt();
+
+		if(age>50)
+		{
+			System.out.println("You are a Senior, Thank you!!!!");
+		}
+		else if(age>20 && age<=50)
+		{
+			System.out.println("You are an Adult");
+		}
+		else if(age>11 && age<=20)
+		{
+			System.out.println("You are a Teenager");
+		}
+		else
+		{
+			System.out.println("You are a Child");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>javac PersonAge.java
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonAge
+Enter your age please:
+15
+You are a Teenager
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonAge
+Enter your age please:
+45
+You are an Adult
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonAge
+Enter your age please:
+6
+You are a Child
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonAge
+Enter your age please:
+78
+You are a Senior, Thank you!!!!
+
+
+****************************************
+
+
+2. Find the largest of three numbers.
+   - Example: If the numbers are 4, 9, and 2, the output should be "Largest number is 9."
+Code:
+import java.util.Scanner;
+
+public class LargestNumber
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 1st number: ");
+		int n1 = sc.nextInt();
+		System.out.println("Enter 2nd number: ");
+		int n2 = sc.nextInt();
+		System.out.println("Enter 3rd number: ");
+		int n3 = sc.nextInt();
+
+		if(n1>n2 && n1>n3)
+		{
+			System.out.println("The largest number is: "+n1);
+		}
+		else if(n2>n3)
+		{
+			System.out.println("The largest number is: "+n2);
+		}
+		else
+		{
+			System.out.println("The largest number is: "+n3);
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java LargestNumber
+Enter 1st number:
+45
+Enter 2nd number:
+23
+Enter 3rd number:
+78
+The largest number is: 78
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java LargestNumber
+Enter 1st number:
+67
+Enter 2nd number:
+34
+Enter 3rd number:
+12
+The largest number is: 67
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java LargestNumber
+Enter 1st number:
+56
+Enter 2nd number:
+204
+Enter 3rd number:
+4
+The largest number is: 204
+
+
+************************************
+
+
+3. Assign a letter grade (A, B, C, D, F) based on a given score.
+   - Example: If the score is 85, the output should be "Grade is B."
+
+Code:
+
+import java.util.Scanner;
+
+public class ScoreGrade
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your Score: ");
+		int n1 = sc.nextInt();
+
+		if(n1>90 && n1<=100)
+		{
+			System.out.println("Your Grade is: A");
+		}
+		else if(n1>80 && n1<=90)
+		{
+			System.out.println("Your Grade is: B");
+		}
+		else if(n1>65 && n1<=80)
+		{
+			System.out.println("Your Grade is: C");
+		}
+		else if(n1>50 && n1<=65)
+		{
+			System.out.println("Your Grade is: D");
+		}
+		else if(n1<=50)
+		{
+			System.out.println("Your Grade is: F");
+		}
+		else
+		{
+			System.out.println("Please enter valid score....!!");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java ScoreGrade
+Enter your Score:
+48
+Your Grade is: F
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java ScoreGrade
+Enter your Score:
+89
+Your Grade is: B
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java ScoreGrade
+Enter your Score:
+90
+Your Grade is: B
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java ScoreGrade
+Enter your Score:
+3930
+Please enter valid score....!!
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java ScoreGrade
+Enter your Score:
+3
+Your Grade is: F
+
+
+******************************
+
+ 
+4. Check if a number is positive, negative, or zero.
+   - Example: If the number is -5, the output should be "Number is negative."
+
+Code:
+
+import java.util.Scanner;
+
+public class CheckNumber
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your a number: ");
+		int n1 = sc.nextInt();
+
+		if(n1>0)
+		{
+			System.out.println("Number is positive");
+		}
+		else if(n1<0)
+		{
+			System.out.println("number is negative");
+		}
+		else
+		{
+			System.out.println("Number is zero 0");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckNumber
+Enter your a number:
+0
+Number is zero 0
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckNumber
+Enter your a number:
+-5
+number is negative
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckNumber
+Enter your a number:
+34
+Number is positive
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckNumber
+Enter your a number:
+-56
+number is negative
+
+
+*************************************
+
+
+5. Determine the type of a triangle (equilateral, isosceles, or scalene) based on its side lengths.
+   - Example: If the sides are 5, 5, and 8, the output should be "Isosceles Triangle."
+Code:
+import java.util.Scanner;
+
+public class TriangleType
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 1st side:");
+		int s1 = sc.nextInt();
+		System.out.println("Enter 2nd side:");
+		int s2 = sc.nextInt();
+		System.out.println("Enter 3rd side:");
+		int s3 = sc.nextInt();
+
+		if(s1==s2 && s1==s3)
+		{
+			System.out.println("Triangle is Equilateral");
+		}
+		else if(s1==s2 || s1==s3 || s2==s3)
+		{
+			System.out.println("Triangle is isosceles");
+		}
+		else
+		{
+			System.out.println("Triangle is Scalene");
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java TriangleType
+Enter 1st side:
+3
+Enter 2nd side:
+7
+Enter 3rd side:
+7
+Triangle is isosceles
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java TriangleType
+Enter 1st side:
+4
+Enter 2nd side:
+5
+Enter 3rd side:
+7
+Triangle is Scalene
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java TriangleType
+Enter 1st side:
+6
+Enter 2nd side:
+6
+Enter 3rd side:
+6
+Triangle is Equilateral
+
+
+********************************************
+
+
+6. Categorize a number as small, medium, or large based on given thresholds.
+   - Example: If the number is 15 (thresholds: small < 10, medium < 20), the output should be "Medium."
+
+Code:
+import java.util.Scanner;
+
+public class NumberRange
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number:");
+		int s1 = sc.nextInt();
+		
+		if(s1 < 10)
+		{
+			System.out.println("Small");
+		}
+		else if(s1>=10 && s1<20)
+		{
+			System.out.println("Medium");
+		}
+		else
+		{
+			System.out.println("Large");
+		}
+		
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java NumberRange
+Enter number:
+56
+Large
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java NumberRange
+Enter number:
+12
+Medium
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java NumberRange
+Enter number:
+1
+Small
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java NumberRange
+Enter number:
+0
+Small
+
+
+****************************************
+
+
+7. Check if a character is a vowel, consonant, digit, or special character.
+   - Example: If the character is 'e', the output should be "Vowel."
+
+Code:
+import java.util.Scanner;
+
+public class CheckCharacter
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a character:");
+		char ch = sc.next().charAt(0);
+
+		if((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z'))
+		{
+			if((ch == 'A') || (ch == 'E') || (ch == 'I') || (ch == 'O') || (ch == 'U') ||
+			   (ch == 'a') || (ch == 'e') || (ch == 'i') || (ch == 'o') || (ch == 'u'))
+			{
+				System.out.println("Vowels");
+			}
+			else
+			{
+				System.out.println("Consonant");
+			}
+		}
+		else if(ch >='0' && ch<='0')
+		{
+			System.out.println("Digit");
+		}
+		else
+		{
+			System.out.println("Special Character");
+		}
+	}
+}
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckCharacter
+Enter a character:
+u
+Vowels
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckCharacter
+Enter a character:
+0
+Digit
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckCharacter
+Enter a character:
+*
+Special Character
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckCharacter
+Enter a character:
+g
+Consonant
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckCharacter
+Enter a character:
+A
+Vowels
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckCharacter
+Enter a character:
+$
+Special Character
+
+
+********************************************
+
+
+8. Determine the month name based on a given number (1 for January, 2 for February, etc.).
+   - Example: If the input is 7, the output should be "July."
+
+Code:
+import java.util.Scanner;
+
+public class Month
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the month number:");
+		int n1 = sc.nextInt();
+		
+		if(n1 == 1)
+		{
+			System.out.println("January");
+		}
+		else if(n1 == 2)
+		{
+			System.out.println("February");
+		}
+		else if(n1 == 3)
+		{
+			System.out.println("March");
+		}
+		else if(n1 == 4)
+		{
+			System.out.println("April");
+		}
+		else if(n1 == 5)
+		{
+			System.out.println("May");
+		}
+		else if(n1 == 6)
+		{
+			System.out.println("June");
+		}
+		else if(n1 == 7)
+		{
+			System.out.println("July");
+		}
+		else if(n1 == 8)
+		{
+			System.out.println("August");
+		}
+		else if(n1 == 9)
+		{
+			System.out.println("September");
+		}
+		else if(n1 == 10)
+		{
+			System.out.println("October");
+		}
+		else if(n1 == 11)
+		{
+			System.out.println("November");
+		}
+		else if(n1 == 12)
+		{
+			System.out.println("December");
+		}
+		else 
+		{
+			System.out.print("Enter valid Month number");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java Month
+Enter the month number:
+5
+May
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java Month
+Enter the month number:
+7
+July
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java Month
+Enter the month number:
+12
+December
+
+
+*************************************
+
+
+9. Check if a year is a leap year, century year, or a regular year.
+   - Example: If the year is 1900, the output should be "Century year."
+
+Code:
+import java.util.Scanner;
+
+public class CheckYear
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the year:");
+		int n1 = sc.nextInt();
+		
+		if(n1%100 == 0)
+		{
+			if(n1%400 == 0)
+			{
+				System.out.println("Its a leap year");
+			}
+			else
+			{
+				System.out.println("Its a Century year");
+			}			
+		}
+		else 
+		{
+			if(n1%4 == 0)
+			{
+				System.out.println("Its a leap year");
+			}
+			else
+			{
+				System.out.println("Its a Regular year");
+			}
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckYear
+Enter the year:
+2400
+Its a leap year
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckYear
+Enter the year:
+2300
+Its a Century year
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckYear
+Enter the year:
+1997
+Its a Regular year
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java CheckYear
+Enter the year:
+1996
+Its a leap year
+
+
+***********************************
+
+
+10. Classify a person's height as short, average, or tall.
+    - Example: If the height is 170 cm (short < 160, average < 180), the output should be "Average."
+
+Code:
+import java.util.Scanner;
+
+public class PersonHeight
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter your Height: ");
+		int n1 = sc.nextInt();
+
+		if(n1>=180)
+		{
+			System.out.println("Tall");
+		}
+		else if(n1>=160 && n1<180)
+		{
+			System.out.println("Average");
+		}
+		else
+		{
+			System.out.println("Short");
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonHeight
+Enter your Height:
+178
+Average
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonHeight
+Enter your Height:
+198
+Tall
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonHeight
+Enter your Height:
+150
+Short
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonHeight
+Enter your Height:
+164
+Average
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonHeight
+Enter your Height:
+155
+Short
+
+
+*******************************
+
+
+11. Determine the season (winter, spring, summer, fall) based on a given month.
+    - Example: If the month is 12 (December), the output should be "Winter."
+
+Code:
+import java.util.Scanner;
+
+public class SeasonCheck
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the month: ");
+		int n1 = sc.nextInt();
+
+		if(n1 == 1 || n1 == 2 || n1 == 12)
+		{
+			System.out.println("Winter");
+		}
+		else if(n1 == 3 || n1 == 4 || n1 == 5)
+		{
+			System.out.println("Spring");
+		}
+		else if(n1 == 6 || n1 == 7 || n1 ==8)
+		{
+			System.out.println("Summer");
+		}
+		else if(n1 == 9 || n1 == 10 || n1 == 11)
+		{
+			System.out.println("Fall");
+		}
+		else
+		{
+			System.out.println("Please enter valid season month....!!");
+		}
+	}
+}
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java SeasonCheck
+Enter the month:
+7
+Summer
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java SeasonCheck
+Enter the month:
+2
+Winter
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java SeasonCheck
+Enter the month:
+4
+Spring
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java SeasonCheck
+Enter the month:
+10
+Fall
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java SeasonCheck
+Enter the month:
+12
+Winter
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java SeasonCheck
+Enter the month:
+45
+Please enter valid season month....!!
+
+
+**********************************************
+
+
+12. Categorize an employee's salary into low, medium, or high based on given thresholds.
+    - Example: If the salary is $50,000 (low < $30,000, medium < $70,000), the output should be "Medium salary."
+
+Code:
+import java.util.Scanner;
+
+public class EmployeeSalary
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Salary: ");
+		int n1 = sc.nextInt();
+
+		if(n1 >= 70000)
+		{
+			System.out.println("High");
+		}
+		else if(n1 >= 30000 && n1 < 70000)
+		{
+			System.out.println("Medium");
+		}
+		else if(n1 < 30000)
+		{
+			System.out.println("Low");
+		}
+		else
+		{
+			System.out.println("Please enter valid Salary....!!");
+		}
+	}
+}
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java EmployeeSalary
+Enter the Salary:
+45000
+Medium
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java EmployeeSalary
+Enter the Salary:
+2000
+Low
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java EmployeeSalary
+Enter the Salary:
+78990
+High
+
+
+13. Check the type of day (weekday, weekend, or holiday) based on a given day of the week.
+    - Example: If the day is "Saturday," the output should be "Weekend."
+
+*********************************
+
+14. Determine the discount percentage based on the total purchase amount.
+    - Example: If the amount is $250 (discount: 10% for $100-$500), the output should be "Discount is 10%."
+
+Code:
+import java.util.Scanner;
+
+public class DiscountPercentage
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Purchase Amount: ");
+		int n1 = sc.nextInt();
+
+		if(n1 > 500)
+		{
+			System.out.println("Discount is 15%");
+		}
+		else if(n1 >= 100 && n1 <= 500)
+		{
+			System.out.println("Discount is 10%");
+		}
+		else if(n1 < 100)
+		{
+			System.out.println("Discount is 5%");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java DiscountPercentage
+Enter the Purchase Amounnt:
+200
+Discount is 10%
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java DiscountPercentage
+Enter the Purchase Amounnt:
+100
+Discount is 10%
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java DiscountPercentage
+Enter the Purchase Amounnt:
+99
+Discount is 5%
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java DiscountPercentage
+Enter the Purchase Amounnt:
+800
+Discount is 15%
+
+
+**************************************
+
+
+15. Classify an angle as acute, right, obtuse, or straight based on its degree measure.
+    - Example: If the angle is 45 degrees, the output should be "Acute angle."
+
+Code:
+import java.util.Scanner;
+
+public class AngleCheck
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Angle: ");
+		int n1 = sc.nextInt();
+
+		if(n1 == 180)
+		{
+			System.out.println("Straight");
+		}
+		else if(n1 > 90 && n1 < 180)
+		{
+			System.out.println("Obtuse");
+		}
+		else if(n1 == 90)
+		{
+			System.out.println("Right");
+		}
+		else if(n1 > 1 && n1 < 90)
+		{
+			System.out.println("Acute");
+		}
+		else
+		{
+			System.out.println("Enter valid Angle....");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java AngleCheck
+Enter the Angle:
+7
+Acute
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java AngleCheck
+Enter the Angle:
+45
+Acute
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java AngleCheck
+Enter the Angle:
+67
+Acute
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java AngleCheck
+Enter the Angle:
+90
+Right
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java AngleCheck
+Enter the Angle:
+95
+Obtuse
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java AngleCheck
+Enter the Angle:
+178
+Obtuse
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java AngleCheck
+Enter the Angle:
+180
+Straight
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java AngleCheck
+Enter the Angle:
+-8
+Enter valid Angle....
+
+
+*****************************************
+
+
+16. Determine the type of quadrilateral (square, rectangle, parallelogram, trapezoid) based on side lengths and angles.
+    - Example: If all sides are equal and all angles are 90 degrees, the output should be "Square."
+
+Code:
+
+import java.util.Scanner;
+
+public class QuadrilateralType
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter the length of side 1: ");
+        	int side1 = sc.nextInt();
+        	System.out.print("Enter the length of side 2: ");
+      		int side2 = sc.nextInt();
+        	System.out.print("Enter the length of side 3: ");
+        	int side3 = sc.nextInt();
+        	System.out.print("Enter the length of side 4: ");
+        	int side4 = sc.nextInt();
+
+        
+        	System.out.print("Enter the first angle: ");
+        	int angle1 = sc.nextInt();
+        	System.out.print("Enter the second angle: ");
+        	int angle2 = sc.nextInt();
+        	System.out.print("Enter the third angle: ");
+        	int angle3 = sc.nextInt();
+        	System.out.print("Enter the fourth angle: ");
+        	int angle4 = sc.nextInt();
+
+        	if (angle1 + angle2 + angle3 + angle4 != 360) 
+		{
+            		System.out.println("The angles do not form a quadrilateral.");
+        	} 	
+		else if (side1 == side2 && side2 == side3 && side3 == side4 && 
+                   	 angle1 == 90 && angle2 == 90 && angle3 == 90 && angle4 == 90) 
+		{
+            		System.out.println("The quadrilateral is a Square.");
+        	} 
+		else if ((side1 == side3 && side2 == side4) && 
+                   	(angle1 == 90 && angle2 == 90 && angle3 == 90 && angle4 == 90)) 
+		{
+            		System.out.println("The quadrilateral is a Rectangle.");
+        	} 
+		else if (side1 == side3 && side2 == side4 && angle1 == angle3 && angle2 == angle4)
+		{
+           		System.out.println("The quadrilateral is a Parallelogram.");
+        	} 
+		else if (side1 == side3 || side2 == side4) 
+		{
+            		System.out.println("The quadrilateral is a Trapezoid.");
+        	} 
+		else 
+		{
+            		System.out.println("The quadrilateral is of another type.");
+        	}
+		
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java QuadrilateralType
+Enter the length of side 1: 4
+Enter the length of side 2: 7
+Enter the length of side 3: 4
+Enter the length of side 4: 7
+Enter the first angle: 90
+Enter the second angle: 90
+Enter the third angle: 90
+Enter the fourth angle: 90
+The quadrilateral is a Rectangle.
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java QuadrilateralType
+Enter the length of side 1: 6
+Enter the length of side 2: 8
+Enter the length of side 3: 6
+Enter the length of side 4: 8
+Enter the first angle: 68
+Enter the second angle: 90
+Enter the third angle: 45
+Enter the fourth angle: 7
+The angles do not form a quadrilateral.
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java QuadrilateralType
+Enter the length of side 1: 6
+Enter the length of side 2: 6
+Enter the length of side 3: 6
+Enter the length of side 4: 6
+Enter the first angle: 90
+Enter the second angle: 90
+Enter the third angle: 90
+Enter the fourth angle: 90
+The quadrilateral is a Square.
+
+17. Categorize a person’s weight as underweight, normal, overweight, or obese based on BMI value.
+    - Example: If BMI is 22 (normal 18.5-24.9), the output should be "Normal weight."
+
+Code:
+
+import java.util.Scanner;
+
+public class PersonWeight
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Weight:");
+		int n1 = sc.nextInt();
+
+		if(n1 > 24.9)
+		{
+			System.out.println("Overweight");
+		}
+		else if(n1 >= 18.5 && n1 <= 24.9)
+		{
+			System.out.println("Normal");
+		}
+		else if(n1 < 22)
+		{
+			System.out.println("Underweight");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonWeight
+Enter the Weight:
+24
+Normal
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonWeight
+Enter the Weight:
+12
+Underweight
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java PersonWeight
+Enter the Weight:
+56
+Overweight
+
+
+18. Assign a tax rate based on income levels.
+    - Example: If income is $75,000 (tax rate: 20% for $50,000-$100,000), the output should be "Tax rate is 20%."
+
+Code:
+
+import java.util.Scanner;
+
+public class TaxRate
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Income: ");
+		int n1 = sc.nextInt();
+
+		if(n1 > 100000)
+		{
+			System.out.println("Tax rate is 25%");
+		}
+		else if(n1 >= 50000 && n1 <= 100000)
+		{
+			System.out.println("Tax rate is 20%");
+		}
+		else if(n1 < 50000)
+		{
+			System.out.println("Tax rate is 15%");
+		}
+	}
+}
+
+Output:
+
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java TaxRate
+Enter the Income:
+35000
+Tax rate is 15%
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java TaxRate
+Enter the Income:
+1500000
+Tax rate is 25%
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java TaxRate
+Enter the Income:
+68000
+Tax rate is 20%
+
+
+*************************************
+
+
+19. Determine the type of number (even, odd, positive, negative, zero).
+    - Example: If the number is -6, the output should be "Negative even number."
+Code:
+
+import java.util.Scanner;
+
+public class NumberType
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Number: ");
+		int n1 = sc.nextInt();
+
+		if(n1 > 0)
+		{
+			if(n1 % 2 == 0)
+			{
+				System.out.println("Positive Even number");	
+			}
+			else
+			{
+				System.out.println("Positive Odd number");	
+			}
+			
+		}
+		
+		else if(n1 < 0)
+		{
+			if(n1 % 2 == 0)
+			{
+				System.out.println("Negative Even number");	
+			}
+			else
+			{
+				System.out.println("Negative Odd number");	
+			}
+		}
+		else
+		{
+			System.out.println("Number is zero");
+		}
+		
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java NumberType
+Enter the Number:
+4
+Positive Even number
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java NumberType
+Enter the Number:
+5
+Positive Odd number
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java NumberType
+Enter the Number:
+-6
+Negative Even number
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java NumberType
+Enter the Number:
+-7
+Negative Odd number
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java NumberType
+Enter the Number:
+0
+Number is zero
+
+
+**************************
+
+
+20. Determine the appropriate clothing suggestion (light, moderate, heavy) based on the temperature.
+    - Example: If the temperature is 5°C (light > 20, moderate 10-20), the output should be "Heavy clothing."
+
+Code:
+import java.util.Scanner;
+
+public class ClothSuggetion
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Temperature: ");
+		int n1 = sc.nextInt();
+
+		if(n1 > 20)
+		{
+			System.out.println("Light Clothing");
+		}
+		else if(n1 >= 10 && n1 <= 20)
+		{
+			System.out.println("Moderate Clothing");
+		}
+		else if(n1 < 10)
+		{
+			System.out.println("Heavy Clothing");
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java ClothSuggetion
+Enter the Temperature:
+5
+Heavy Clothing
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java ClothSuggetion
+Enter the Temperature:
+12
+Moderate Clothing
+
+C:\Users\shubh\work\Codenera\Java\ifElseIfAssignment>java ClothSuggetion
+Enter the Temperature:
+45
+Light Clothing
+

@@ -1,0 +1,8 @@
+Break:
+It will break the whole loop execution
+
+Continue:
+It will only skip the particular loop execution
+
+Type Cassting
+-to put big size data in small size data type we need to explicitly type cast into small data type
