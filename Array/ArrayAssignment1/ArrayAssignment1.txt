@@ -1,0 +1,1009 @@
+Q14.Wap to input an array and find its average of first 5 element. 
+
+Code:
+
+import java.util.Scanner;
+public class Question14
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		float sum = 0;
+		float avg;
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			if(i<5)
+			{
+				sum = sum + a[i];
+			}
+			
+		}
+		avg = sum/5;
+
+		System.out.println("The sum of element in array is : "+sum);
+		System.out.println("The average of element in array is : "+avg);
+
+
+		
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question14.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question14
+Enter the size of array
+5
+Enter the elements :
+2
+56
+4
+3
+9
+The elements in array are
+2 56 4 3 9
+The sum of element in array is : 74.0
+The average of element in array is : 14.8
+
+
+**************************************************************************************
+
+Q15.Wap to input an array and and print the  sum and count of  even no.
+
+import java.util.Scanner;
+public class Question15
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		int sum = 0;
+		int evenCount = 0;
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			if(a[i] % 2 == 0)
+			{
+				sum = sum + a[i];
+				evenCount++;
+			}
+		}
+		System.out.println("The sum of even numbers in array is : "+sum);
+		System.out.println("The count of even numbers in array is : "+evenCount);		
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question15.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question15
+Enter the size of array
+5
+Enter the elements :
+23
+56
+34
+1
+4
+The elements in array are
+23 56 34 1 4
+The sum of even numbers in array is : 94
+The count of even numbers in array is : 3
+
+
+********************************************************************************************
+
+
+Q16.Wap to input an array and and print the  sum and count of odd  no.
+
+Code:
+import java.util.Scanner;
+public class Question16
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		int sum = 0;
+		int oddCount = 0;
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			if(a[i] % 2 == 1)
+			{
+				sum = sum + a[i];
+				oddCount++;
+			}
+		}
+		System.out.println("The sum of odd numbers in array is : "+sum);
+		System.out.println("The count of odd numbers in array is : "+oddCount);		
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question16.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question16
+Enter the size of array
+5
+Enter the elements :
+23
+67
+5
+4
+24
+The elements in array are
+23 67 5 4 24
+The sum of odd numbers in array is : 95
+The count of odd numbers in array is : 3
+
+
+**************************************************************************************
+
+Q17 Wap enter an array and print element present at odd position and also find count.
+
+Code:
+import java.util.Scanner;
+public class Question17
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		System.out.println("The odd position elements in array are :");
+		int oddPosCount = 0;
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			int pos = i+1;
+			if(pos % 2 == 1)
+			{
+				System.out.print(a[pos-i]+" ");
+				oddPosCount++;
+			}
+		}
+		System.out.println();
+		System.out.println("The count of odd position numbers in array is : "+oddPosCount);		
+	}
+}
+
+Output:
+
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question17.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question17
+Enter the size of array
+5
+Enter the elements :
+3
+5
+7
+4
+2
+The elements in array are :
+3 5 7 4 2
+The odd position elements in array are :
+3 7 2
+The count of odd position numbers in array is : 3
+
+
+****************************************************************************************
+
+Q18 Wap enter an array and print element present at odd position and also find count.
+
+Code:
+import java.util.Scanner;
+public class Question17
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		System.out.println("The odd position elements in array are :");
+		int oddPosCount = 0;
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			int pos = i+1;
+			if(pos % 2 == 1)
+			{
+				System.out.print(a[i]+" ");
+				oddPosCount++;
+			}
+		}
+		System.out.println();
+		System.out.println("The count of odd position numbers in array is : "+oddPosCount);		
+	}
+}
+
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question18
+Enter the size of array
+5
+Enter the elements :
+23
+56
+4
+6
+8
+The elements in array are :
+23 56 4 6 8
+The even position elements in array are :
+56 6
+The count of even position numbers in array is : 2
+
+
+************************************************************************************************
+
+Q1.Wap enter an array and find the sum and count of element present at even position.
+
+Code:
+import java.util.Scanner;
+public class Question1
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		int sum = 0, evenPosCount = 0;
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			int pos = i+1;
+			if(pos % 2 == 0)
+			{
+				sum = sum + a[pos-1];
+				evenPosCount++;
+			}
+		}
+		System.out.println();
+		System.out.println("The sum of even position numbers in array is : "+sum);
+		System.out.println("The count of even position numbers in array is : "+evenPosCount);		
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question1.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question1
+Enter the size of array
+5
+Enter the elements :
+2
+6
+4
+3
+8
+The elements in array are :
+2 6 4 3 8
+
+The sum of even position numbers in array is : 9
+The count of even position numbers in array is : 2
+
+
+*******************************************************************************************
+
+Q2.Wap enter an array and find the sum and count of odd element.
+
+Code:
+import java.util.Scanner;
+public class Question2
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		int sum = 0, oddPosCount = 0;
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			int pos = i+1;
+			if(pos % 2 == 1)
+			{
+				sum = sum + a[pos-1];
+				oddPosCount++;
+			}
+		}
+		System.out.println("The sum of odd position numbers in array is : "+sum);
+		System.out.println("The count of odd position numbers in array is : "+oddPosCount);		
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question2.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question2
+Enter the size of array
+6
+Enter the elements :
+2
+6
+7
+8
+4
+1
+The elements in array are :
+2 6 7 8 4 1
+The sum of odd position numbers in array is : 13
+The count of odd position numbers in array is : 3
+
+***************************************************************************************************
+ 
+Q3. WAP to replace all the 0’s with 1’s in your array. Your array is 
+[26, 0, 67, 45, 0, 78, 54, 34, 10, 0, 34] 
+
+Code:
+public class Question3
+{
+	public static void main(String arg[])
+	{
+		int a[] = {26, 0, 67, 45, 0, 78, 54, 34, 10, 0, 34};
+
+		for(int i = 0; i < a.length; i++)
+		{
+			if(a[i] == 0)
+			{
+				a[i] = 1;
+			}
+		}
+
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		
+	}
+}
+
+
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question3.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question3
+26 1 67 45 1 78 54 34 10 1 34
+
+***************************************************************************
+
+Q4.Wap enter an array and search any particular element and find the count.
+
+Code:
+import java.util.Scanner;
+public class Question4
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the array size : ");
+		int size = sc.nextInt();
+		int a[] = new int [size];
+
+		System.out.println("Enter the array elements : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		System.out.println();
+		System.out.println("Enter the element to search : ");
+		int n1 = sc.nextInt();
+		int count = 0;
+		for(int i = 0; i < a.length; i++)
+		{
+			if(a[i] == n1)
+			{
+				count++;
+			}
+		}
+		System.out.println("The count of searched element i.e "+n1+" is : "+count);	
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question4.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question4
+Enter the array size :
+7
+Enter the array elements :
+3
+6
+8
+2
+6
+8
+6
+The array elements are :
+3 6 8 2 6 8 6
+Enter the element to search :
+6
+The count of searched element i.e 6 is : 3
+
+
+********************************************************************************************
+
+
+Q5.WAP to check if an array of integers contains two specified elements.
+
+Code:
+import java.util.Scanner;
+public class Question5
+{
+	public static void main(String arg[])
+	{
+		int a[] = {55, 45, 60, 35, 50, 60, 20};
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		System.out.println();
+
+		System.out.println("Enter the 1st element to search : ");
+		int n1 = sc.nextInt();
+		System.out.println("Enter the 2nd element to search : ");
+		int n2 = sc.nextInt();
+
+		boolean found1 = false;
+		boolean found2 = false;
+
+		for(int i = 0; i < a.length; i++)
+		{
+			if(a[i] == n1)
+			{
+				found1 = true;
+			}
+			if(a[i] == n2)
+			{
+				found2 = true;
+			}
+			if(found1 && found2)
+			{
+				break;
+			}
+		}
+
+		if(found1 && found2) 
+		{
+            		System.out.println("Both the specified numbers i.e. "+n1+" and "+n2+" are present in the array.");
+        	} 
+		else if(found1) 
+		{
+            		System.out.println("Only the first number "+n1+" is present in the array.");
+        	} 
+		else if(found2) 
+		{
+            		System.out.println("Only the second number "+n2+" is present in the array.");
+        	} 
+		else 
+		{
+            		System.out.println("Both the specified numbers are not present in the array.");
+        	}	
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question5
+The array elements are :
+55 45 60 35 50 60 20
+Enter the 1st element to search :
+45
+Enter the 2nd element to search :
+20
+Both the specified numbers i.e. 45 and 20 are present in array
+The specified number is not present.
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question5.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question5
+The array elements are :
+55 45 60 35 50 60 20
+Enter the 1st element to search :
+35
+Enter the 2nd element to search :
+45
+Both the specified numbers i.e. 35 and 45 are present in the array.
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question5
+The array elements are :
+55 45 60 35 50 60 20
+Enter the 1st element to search :
+50
+Enter the 2nd element to search :
+5
+Only the first number 50 is present in the array.
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question5
+The array elements are :
+55 45 60 35 50 60 20
+Enter the 1st element to search :
+80
+Enter the 2nd element to search :
+20
+Only the second number 20 is present in the array.
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question5
+The array elements are :
+55 45 60 35 50 60 20
+Enter the 1st element to search :
+5
+Enter the 2nd element to search :
+7
+Both the specified numbers are not present in the array.
+
+
+**********************************************************************************
+Q6.Wap enter an array and find the duplicate element and also count of that.
+
+code:
+import java.util.Scanner;
+public class Question6
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the array size : ");
+		int size = sc.nextInt();
+		int a[] = new int [size];
+
+		System.out.println("Enter the array elements : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		System.out.println();
+		System.out.println("The duplicate element in array are : ");
+		int count = 0;
+		for(int i = 0; i < a.length; i++)
+		{
+			for(int j = i+1; j < a.length; j++)
+			{
+				if(a[i] == a[j])
+				{
+					System.out.print(a[i]+" ");
+					count++;
+				}
+			}
+		}
+		System.out.println();
+		System.out.println("The duplicate element count in array is : "+count);		
+	}
+}
+
+output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question6
+Enter the array size :
+6
+Enter the array elements :
+23
+45
+22
+45
+23
+4
+The array elements are :
+23 45 22 45 23 4
+The duplicate element in array are :
+23 45
+The duplicate element count in array is : 2
+
+
+**********************************************************************************
+
+Q7.Wap enter an array and print the square of the element which is on odd position.
+
+Code:
+import java.util.Scanner;
+public class Question7
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		System.out.println("The square of elements at odd position are : ");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			int pos = i+1;
+			if(pos % 2 == 1)
+			{
+				System.out.print(a[pos-1]*a[pos-1]+" ");
+				
+			}
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question7
+Enter the size of array
+5
+Enter the elements :
+2
+6
+3
+8
+7
+The elements in array are :
+2 6 3 8 7
+The square of elements at odd position are :
+4 9 49
+
+*********************************************************************************
+
+Q8.Wap enter an array and print the  square of the element which is on even position.
+
+Code:
+import java.util.Scanner;
+public class Question8
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		System.out.println("The square of elements at even position are : ");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			int pos = i+1;
+			if(pos % 2 == 0)
+			{
+				System.out.print(a[pos-1]*a[pos-1]+" ");
+			}
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question8.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question8
+Enter the size of array
+6
+Enter the elements :
+3
+5
+8
+2
+9
+7
+The elements in array are :
+3 5 8 2 9 7
+The square of elements at even position are :
+25 4 49
+
+***********************************************************************************
+
+Q9. WAP to replace all negative value with its immediate left elements square. Means
+     arr[] = [12, 3, -19, 29, 5, -61, 44, 7, -9]
+     Output array will be [12, 3, 9, 29, 5, 25, 44, 7, 49] 
+
+public class Question9
+{
+	public static void main(String arg[])
+	{
+		int arr[] = {12, 3, -19, 29, 5, -61, 44, 7, -9};
+
+		System.out.println("The given array is : ");
+		for(int i = 0; i < arr.length; i++)
+		{
+			System.out.print(arr[i]+" ");
+		}
+
+		for(int i = 0; i < arr.length; i++)
+		{
+			if(arr[i] < 0)
+			{
+				arr[i] = (arr[i-1]*arr[i-1]);
+			}
+		}
+
+		System.out.println();
+		System.out.println("The new array is : ");
+		for(int i = 0; i < arr.length; i++)
+		{
+			System.out.print(arr[i]+" ");
+		}	
+	}
+}
+
+
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question9.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question9
+The given array is :
+12 3 -19 29 5 -61 44 7 -9
+The new array is :
+12 3 9 29 5 25 44 7 49
+
+***********************************************************************************
+
+Q10.Wap enter an array and print it in reverse order.
+
+Code:
+
+import java.util.Scanner;
+public class Question10
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		System.out.println("The reverse elements in array are : ");
+		for(int i = a.length-1; i >= 0; i--)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question10.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question10
+Enter the size of array
+5
+Enter the elements :
+3
+6
+90
+8
+2
+The elements in array are :
+3 6 90 8 2
+The reverse elements in array are :
+2 8 90 6 3
+
+*********************************************************************************
+
+Q11.Wap enter an array and find the no in array  which is equal to the sum of 1st and last element.
+
+Code:
+import java.util.Scanner;
+public class Question11
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		int sum = a[0]+a[a.length-1];
+		for(int i = 0; i < a.length; i++)
+		{
+			if(a[i] == sum)
+			{
+				System.out.println("The element index is :"+i+" and element is : "+a[i]);
+			}
+		}	
+	}
+}
+
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>javac Question11.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment1>java Question11
+Enter the size of array
+6
+Enter the elements :
+23
+4
+5
+25
+3
+2
+The elements in array are :
+23 4 5 25 3 2
+The element index is :3 and element is : 25

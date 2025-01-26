@@ -1,0 +1,218 @@
+Q1.Write a Java program to check if an array of integers without 0 and -1.
+
+Code:
+public class Question1
+{
+	public static void main(String arg[])
+	{
+		int a[] = {23, 5, 4, 7, 2};
+		// int a[] = {23, 5, 4, 7, 0, 2, -1}
+		boolean present = false;
+		for(int i = 0; i < a.length; i++)
+		{
+			if(a[i] == 0 || a[i] == -1)
+			{
+				present = true;	
+			}
+		}
+		if(present)
+		{
+			System.out.println("The array of integers contains 0 or -1");
+		}
+		else
+		{
+			System.out.println("The array of integers does not contain 0 or -1");
+		}		
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>javac Question1.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>java Question1
+The array of integers contains 0 or -1
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>javac Question1.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>java Question1
+The array of integers does not contain 0 or -1
+
+
+**************************************************************************************
+
+Q3.Write a Java program to find the sum of the two elements of a given array which is equal to a given integer.
+   Sample array: [1,2,4,5,6]
+   Target value: 6.
+
+public class Question3
+{
+	public static void main(String arg[])
+	{
+		int a[] = {1,2,4,5,6};
+		int target = 6;
+
+		System.out.println("The pairs are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			for(int j = i+1; j < a.length; j++)
+			{
+				if(a[i]+a[j] == target)
+				{
+					System.out.println(a[i]+", "+a[j]);
+				}
+			}
+		}	
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>javac Question3.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>java Question3
+The pairs are :
+1, 5
+2, 4
+
+
+*********************************************************************************************
+
+Q4.Write a Java program to print all the LEADERS in the array.
+  Note: An element is leader if it is greater than all the elements to its right side..
+
+Code:
+
+public class Question4
+{
+	public static void main(String arg[])
+	{
+		int a[] = {20,1,30,9,2,4,5,6};
+		
+		System.out.println("The array elements are : ");
+		for(int j = 0; j < a.length; j++)	
+		{
+			System.out.print(a[j]+" ");
+		}
+
+		System.out.println();
+		System.out.println("The leader elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			int j;
+			for(j = i+1; j < a.length; j++)
+			{
+				if(a[i] <= a[j])
+				{
+					break;
+				}
+			}
+			if(j == a.length)
+			{
+				System.out.print(a[i]+" ");
+			}
+		}	
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>java Question4
+The array elements are :
+20 1 30 9 2 4 5 6
+The leader elements are :
+30 9 6
+
+
+*****************************************************************************************
+
+
+Q.6	Write a Java program to separate even and odd numbers of a given array of integers. 
+	Put all even numbers first, and then odd numbers.
+
+Code:
+public class Question6
+{
+	public static void main(String arg[])
+	{
+		int a [] = {2,54,34,23,9,8,5};
+		int start = 0, end = a.length - 1;
+
+		while(start < end)
+		{
+			if(a[start] % 2 == 0)
+			{
+				start++;
+			}
+			else if(a[end] % 2 != 0)
+			{
+				end--;
+			}
+			else
+			{
+				int temp = a[start];
+				a[start] = a[end];
+				a[end] = temp;
+				start++;
+				end--;
+			}
+		}
+		System.out.println("Even odd Separate array : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>javac Question6.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>java Question6
+Even odd Separate array :
+2 54 34 8 9 23 5
+
+
+*********************************************************************************
+
+Q7.Write a java program to find prime number between an array of element.
+
+Code:
+
+public class Question7
+{
+	public static void main(String arg[])
+	{
+		int a [] = {2,7,31,23,9,8,70,47};
+		
+		System.out.println("The prime numbers in array are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			int count = 0;
+			for(int j = 1 ; j <= a[i]; j++)
+			{
+				if(a[i] % j == 0)
+				{
+					count++;
+				}
+			}
+			if(count == 2)
+			{
+				System.out.print(a[i]+" ");
+			}
+		}
+	}
+}
+
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>javac Question7.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.2>java Question7
+The prime numbers in array are :
+2 7 31 23 47
+
+***************************************************************************
+
+
+
+
+
+

@@ -1,0 +1,870 @@
+Q1. WAP to merge two Array and print the final array.
+
+public class Question1
+{
+	public static void main(String args[])
+	{
+		int a[] = {3, 0, 4, 7, 8};
+		int b[] = {3, 75, 61, 34, 9};
+
+		int size = a.length + b.length;
+
+		int c[] = new int [size];
+
+		for(int i = 0; i < a.length; i++)
+		{	
+			c[i] = a[i];
+		}
+		for(int i = 0; i < b.length; i++)
+		{
+			c[a.length+i] = b[i];
+		}
+		for(int i = 0; i < c.length; i++)
+		{
+			System.out.print(c[i]+" ");
+		}
+	}
+}
+
+
+********************************************************
+
+
+Q2. Wap enter an array and sort that in accending order.
+
+Code:
+
+public class Question2
+{
+	public static void main(String arg [])
+	{
+		int a[] = {15, 12, 5, 8, 4, 2, 3, 7};
+
+		for(int i = 0; i < a.length; i++)
+		{
+			for(int j = i+1; j < a.length; j++)
+			{
+				if(a[i] > a[j])
+				{
+					int temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question2.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question2
+2 3 4 5 7 8 12 15
+
+***************************************************************************************
+
+Q3. Wap enter an array and sort that in decending order
+
+Code:
+
+public class Question3
+{
+	public static void main(String arg [])
+	{
+		int a[] = {15, 12, 5, 8, 4, 2, 3, 7};
+
+		for(int i = 0; i < a.length; i++)
+		{
+			for(int j = i+1; j < a.length; j++)
+			{
+				if(a[i] < a[j])
+				{
+					int temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question3.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question3
+15 12 8 7 5 4 3 2
+
+****************************************************************************
+
+
+Q4. Wap enter an array and find the second max element.
+
+Code:
+public class Question4
+{
+	public static void main(String arg [])
+	{
+		int a[] = {15, 12, 5, 8, 4, 2, 3, 7};
+
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		for(int i = 0; i < a.length; i++)
+		{
+			for(int j = i+1; j < a.length; j++)
+			{
+				if(a[i] > a[j])
+				{
+					int temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+		System.out.println();
+		System.out.println("The second max number is "+a[a.length - 2]);
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question4.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question4
+15 12 5 8 4 2 3 7
+The second max number is 12
+
+****************************************************************************
+
+Q5. Wap enter an array and find the second min element.
+
+Code:
+public class Question5
+{
+	public static void main(String arg [])
+	{
+		int a[] = {9, 15, 10, 12, 5, 8, 4, 2, 3, 7};
+		
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		for(int i = 0; i < a.length; i++)
+		{
+			for(int j = i+1; j < a.length; j++)
+			{
+				if(a[i] > a[j])
+				{
+					int temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+		System.out.println();
+		System.out.println("The second min number is "+a[1]);	
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question5.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question5
+9 15 10 12 5 8 4 2 3 7
+The second min number is 3
+
+****************************************************************************
+
+Q6. Wap enter an array and find max and min element.
+
+public class Question6
+{
+	public static void main(String arg [])
+	{
+		int a[] = {9, 15, 10, 12, 5, 8, 4, 2, 3, 7};
+		int max = a[0];
+		int min = a[0];
+	
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		System.out.println();
+
+		for(int i = 1; i < a.length; i++)
+		{
+			if(a[i] > max)
+			{
+				max = a[i];
+			}
+
+			if(a[i] < min)
+			{
+				min = a[i];
+			}
+		}
+
+		System.out.println("The maximum of array element is : "+max);
+		System.out.println("the minimum of array element is : "+min);
+	}
+}
+
+output:
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question6.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question6
+The array elements are :
+9 15 10 12 5 8 4 2 3 7
+The maximum of array element is : 15
+the minimum of array element is : 2
+
+
+******************************************************************************
+
+Q7. WAP Input 10 elements in float and print it; 
+
+Code:
+
+import java.util.Scanner;
+public class Question7
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array : ");
+		int size = sc.nextInt();
+		float a [] = new float [size];
+
+		System.out.println("Enter the float array elements : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextFloat();
+		}
+		
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+", ");
+		}	
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question7.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question7
+Enter the size of array :
+10
+Enter the float array elements :
+67.903
+45.9
+2.89
+-34.67
+36
+0.65
+3.7
+-45
+0.032
+57.06
+The array elements are :
+67.903, 45.9, 2.89, -34.67, 36.0, 0.65, 3.7, -45.0, 0.032, 57.06,
+
+
+**************************************************************************
+
+Q8. WAP input 10 name and print with index 
+
+Code:
+import java.util.Scanner;
+public class Question8
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array : ");
+		int size = sc.nextInt();
+		sc.nextLine();
+		String a [] = new String [size];
+
+		System.out.println("Enter the names in array : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextLine();
+		}
+		
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.println("Index : "+i+" name : "+a[i]);
+		}	
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question8
+Enter the size of array :
+10
+Enter the names in array :
+ajay
+raj
+shan
+rohit
+vishal
+vijay
+mohit
+john
+nick
+paul
+The array elements are :
+Index : 0 name : ajay
+Index : 1 name : raj
+Index : 2 name : shan
+Index : 3 name : rohit
+Index : 4 name : vishal
+Index : 5 name : vijay
+Index : 6 name : mohit
+Index : 7 name : john
+Index : 8 name : nick
+Index : 9 name : paul
+
+***************************************************************************
+
+Q9. Wap to input an array and print it. 
+
+import java.util.Scanner;
+public class Question9
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array : ");
+		int size = sc.nextInt();
+		int a [] = new int [size];
+
+		System.out.println("Enter the array elements : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+", ");
+		}	
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question9.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question9
+Enter the size of array :
+5
+Enter the array elements :
+12
+45
+3
+7
+0
+The array elements are :
+12, 45, 3, 7, 0,
+
+***************************************************************************
+
+Q10. Wap intialise an array and print it.
+
+public class Question10
+{
+	public static void main(String arg[])
+	{
+		int[] arr = {10, 20, 30, 40, 50};
+		
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < arr.length; i++)
+		{
+			System.out.print(arr[i]+", ");
+		}	
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question10.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question10
+The array elements are :
+10, 20, 30, 40, 50,
+
+
+*****************************************************************************
+
+Q11. WAP input 10 elements and multiply 5th elements by 25. 
+
+import java.util.Scanner;
+public class Question11
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array : ");
+		int size = sc.nextInt();
+		int a [] = new int [size];
+
+		System.out.println("Enter the array elements : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+", ");
+		}
+
+		for(int i = 0; i < a.length; i++)
+		{
+			if(i == 4)
+			{
+				a[i] = 5*a[i];
+				break;
+			}
+		}
+		System.out.println();
+		System.out.println("The array after multiplication : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}	
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question11.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question11
+Enter the size of array :
+10
+Enter the array elements :
+45
+2
+6
+8
+3
+9
+0
+2
+12
+4
+The array elements are :
+45, 2, 6, 8, 3, 9, 0, 2, 12, 4,
+The array after multiplication :
+45 2 6 8 15 9 0 2 12 4
+
+*****************************************************************************
+
+Q12. Wap to input an array and find its average of first 5 element. 
+
+Code:
+import java.util.Scanner;
+public class Question12
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array : ");
+		int size = sc.nextInt();
+		int a [] = new int [size];
+
+		System.out.println("Enter the array elements : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+", ");
+		}
+
+		float sum = 0; 
+		float avg;
+		for(int i = 0; i < a.length; i++)
+		{
+			if(i < 5)
+			{
+				sum = sum + a[i];
+			}
+		}
+		avg = sum/5;
+		System.out.println();
+		System.out.println("The average of 1st five elements is : "+avg);	
+	}
+}
+
+output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question12.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question12
+Enter the size of array :
+8
+Enter the array elements :
+2
+6
+3
+8
+9
+10
+5
+4
+The array elements are :
+2, 6, 3, 8, 9, 10, 5, 4,
+The average of 1st five elements is : 5.6
+
+**********************************************************************************
+
+Q16.Wap enter an array and print the square of the element which is on odd position.
+
+Code:
+import java.util.Scanner;
+public class Question16
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		System.out.println("The square of elements at odd position are : ");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			int pos = i+1;
+			if(pos % 2 == 1)
+			{
+				System.out.print(a[pos-1]*a[pos-1]+" ");
+				
+			}
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question16.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question16
+Enter the size of array
+5
+Enter the elements :
+2
+5
+7
+4
+9
+The elements in array are :
+2 5 7 4 9
+The square of elements at odd position are :
+4 49 81
+
+*******************************************************************************
+
+Q17.Wap enter an array and print the  square of the element which is on even position.
+
+Code:
+import java.util.Scanner;
+public class Question17
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+
+		int a[] = new int [size];
+
+		System.out.println("Enter the elements : ");
+
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+
+		System.out.println("The elements in array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		System.out.println("The square of elements at even position are : ");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			int pos = i+1;
+			if(pos % 2 == 0)
+			{
+				System.out.print(a[pos-1]*a[pos-1]+" ");
+			}
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question17.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question17
+Enter the size of array
+6
+Enter the elements :
+3
+6
+8
+2
+9
+12
+The elements in array are :
+3 6 8 2 9 12
+The square of elements at even position are :
+36 4 144
+
+********************************************************************************
+
+Q18.Wap input two array and merge in third array.
+
+import java.util.Scanner;
+public class Question18
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of 1st array :");
+		int s1 = sc.nextInt();
+		int a[] = new int [s1];
+
+		System.out.println("Enter the size of 2nd array :");
+		int s2 = sc.nextInt();
+		int b[] = new int [s2];
+
+		System.out.println("Enter the elements in 1st array : ");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.println();
+		System.out.println("Enter the elements in 2nd array : ");
+		for(int i = 0; i <= b.length - 1; i++)
+		{
+			b[i] = sc.nextInt();
+		}
+		
+		System.out.println("The elements in 1st array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		System.out.println();
+		System.out.println("The elements in 2nd array are :");
+		for(int i = 0; i <= b.length - 1; i++)
+		{
+			System.out.print(b[i]+" ");
+		}
+
+		int c [] = new int [s1+s2];
+		for(int i = 0; i < a.length; i++)
+		{
+			c[i] = a[i];
+		}
+		for(int i = 0; i < b.length; i++)
+		{
+			c[i+a.length] = b[i];
+		}
+		System.out.println();
+		System.out.println("The elements in 3rd array are :");
+		for(int i = 0; i <= c.length - 1; i++)
+		{
+			System.out.print(c[i]+" ");
+		}
+	}
+}
+
+Output:
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question18.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question18
+Enter the size of 1st array :
+5
+Enter the size of 2nd array :
+2
+Enter the elements in 1st array :
+6
+9
+3
+0
+1
+
+Enter the elements in 2nd array :
+4
+7
+The elements in 1st array are :
+6 9 3 0 1
+The elements in 2nd array are :
+4 7
+The elements in 3rd array are :
+6 9 3 0 1 4 7
+
+************************************************************************
+
+Q19.a[]={10,20,30,40,50}   b[]={1,2,3,4,5}
+ output array=c[]={10,5,20,4,30,3,40,2,50,1}
+
+Code:
+public class Question19
+{
+	public static void main(String args[])
+	{
+		int a[] = {10,20,30,40,50};
+		int b[] = {1,2,3,4,5};
+		int c[] = new int [a.length+b.length];
+		
+		System.out.println("The elements in 1st array are :");
+		for(int i = 0; i <= a.length - 1; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		System.out.println();
+		System.out.println("The elements in 2nd array are :");
+		for(int i = 0; i <= b.length - 1; i++)
+		{
+			System.out.print(b[i]+" ");
+		}
+		
+		System.out.println();
+		for (int i = 0; i < a.length; i++) 
+		{
+            		c[2 * i] = a[i];        
+            		c[2 * i + 1] = b[b.length - 1 - i]; 
+       		}
+		System.out.println();
+		System.out.println("The elements in 3rd array are :");
+		for(int i = 0; i <= c.length - 1; i++)
+		{
+			System.out.print(c[i]+" ");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>javac Question19.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2>java Question19
+The elements in 1st array are :
+10 20 30 40 50
+The elements in 2nd array are :
+1 2 3 4 5
+
+The elements in 3rd array are :
+10 5 20 4 30 3 40 2 50 1
+
+
+*****************************************************************************
+
+Q20.Wap sort half array in accending and half in decending order
+    input= int [] a={9,1,3,5,6,11,22,66,10,19}.
+    output={1,3,5,6,9,66,22,19,11,10}
+
+Code:
+public class Question20
+{
+	public static void main(String args[])
+	{
+		int a [] = {9,1,3,5,6,11,22,66,10,19};
+
+		System.out.println("The array elements are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		for(int i = 0; i < a.length; i++)
+		{
+			for(int j = i+1; j < a.length; j++)
+			{
+				if(a[i] > a[j])
+				{
+					int temp = a[i];
+					a[i] = a[j];
+					a[j] = temp; 
+				}
+			}
+		}
+		
+		int mid = a.length/2;
+		int start = mid;
+		int end = a.length-1;
+
+		for(int i = start; i <= end; i++)
+		{
+			int temp = a[i];
+			a[i] = a[end];
+			a[end] = temp;
+			end--;
+		}
+		System.out.println();
+		System.out.println("Half sorted array : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.1>javac Question20.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.1>java Question20
+The array elements are :
+9 1 3 5 6 11 22 66 10 19
+Half sorted array :
+1 3 5 6 9 66 22 19 11 10
+
+
+
+
+
