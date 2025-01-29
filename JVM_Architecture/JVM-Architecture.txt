@@ -35,7 +35,8 @@ Java .class file, then that .class file is input into the JVM, which loads and
 executes the class file
 
 JVM Architecture
-
+bytecode to machine code conersion process is jvm architecture
+jvm path
 -3 phase are there inside JVM
 
 1) class loader subsytem
@@ -58,9 +59,10 @@ path of rt.jar file
 
 Extension class loader:
 It will load the files from extension directory
+path
 
 Application class loader:
-It will loads the files from class path.
+It will loads the files from class path which mentioned in environment variables.
 Another concept of class path is where we store the .class file
 
 
@@ -73,7 +75,7 @@ ii)Linking
 verification, preparation, resolution
 
 *verification:
-check correctness of .class file.
+check correctness of .class file. if not throws exception.
 jvm or security manager will check byte code is made correctly or not
 
 *preparation:
@@ -118,7 +120,7 @@ five memory areas are present
 
 
 3)Stack Area:
--Local vaiables and local data gets stored inside the stack area.
+-Local vaiables and local data gets stored inside the stack area(stack frames).
 -For every thread there will be separate runtime stack will be created.
 -Stack area is temperory area.
 -It is not the shared resource so it is thread safe.
@@ -156,7 +158,7 @@ JIT(Just in time) compiler:
 So to overcome this
 -Repetative task from interpreter is handed to JIT 
 -It will make byte code into native code and use whenever it find repeated code.
--hotspot i.e repeated task will be find by hotspot profiler.
+-hotspot i.e repeated task or repetative method call will be find by hotspot profiler.
 -so interpreter will work fast and increases its performance. 
 
 JNI - Java native Interface:
@@ -164,7 +166,7 @@ JNI - Java native Interface:
 i.e provide native method from native method liraries to execution engine.
 
 Native Method Libraries:
-It stores the files which borrowed from C and C++
+It stores the files which borrowed from C and C++ required to execution engine.
 It is the collection of native methods
 
 
@@ -174,7 +176,7 @@ It is used to clean the memory.
 It will invoke automatically.
 If we want to invoke gc manually then we have to use System.gc() method
 
-
+After all this process bytecode is converted into machine code. 
 
 
 

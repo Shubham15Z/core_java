@@ -1,0 +1,8 @@
+Random Class:
+
+It is present in java.util package
+to creae object we can use
+Random rd = new Random();
+
+ex
+array shuffle

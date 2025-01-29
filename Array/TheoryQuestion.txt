@@ -1,0 +1,24 @@
+Q1 Why array index start with zero
+Ans:
+
+zero based numbering comes from language design itself.
+In C an array points to the location in memory, so in 
+expression array[n], n should not be treated as an index,
+but as an offset from the array’s head
+
+Ex
+
+Array address: 0x7ffe9472bad0
+Array[0] = 0x7ffe9472bad0
+Array[1] = 0x7ffe9472bad4
+Array[2] = 0x7ffe9472bad8
+Array[3] = 0x7ffe9472badc
+Array[4] = 0x7ffe9472bae0
+Array[5] = 0x7ffe9472bae4
+
+the first element and the array itself points to the same 
+memory location, so it is 0 elements away from the location 
+of the array itself.
+
+
+*Array Insert

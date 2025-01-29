@@ -1,12 +1,91 @@
 Q1.Given an array and a number K where K is smaller than the size of the array.
    Find the K’th smallest element in the given array. Given that all array elements are distinct.
-
 Examples:  
-
 Input: arr[] = {7, 10, 4, 3, 20, 15}, K = 3
 Output: 7
+
+Code:
+
+public class Question1
+{
+	public static void main(String arg[])
+	{
+		int a[] = {7, 10, 4, 3, 20, 15};
+		int k = 3;
+
+		for(int i = 0; i < a.length; i++)
+		{
+			for(int j = i+1; j < a.length; j++)
+			{
+				if(a[i] > a[j])
+				{
+					int temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+			if(i == k-1)
+			{
+				System.out.print("K th smallest element is : "+a[i]);
+				break;
+			}
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>javac Question1.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question1
+K th smallest element is : 7
+
+
+*********************************************************************************************************
+
+
 Q2.Given an array of integers arr[], The task is to find the index of first repeating element in it i.e.
    the element that occurs more than once and whose index of the first occurrence is the smallest.
+
+Code:
+public class Question2
+{
+	public static void main(String arg[])
+	{
+		int a[] = {1,3,6,7,9,3,2,6,7,2};
+		int c = 0;
+
+		System.out.println("The index of 1st reapeting element is : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			for(int j = i+1; j<a.length; j++)
+			{
+				if(a[i] == a[j])
+				{
+					System.out.print(i);
+					c++;
+					break;
+				}
+			}
+			if(c > 0)
+			{
+				break;
+			}
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>javac Question2.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question2
+The index of 1st reapeting element is :
+1
+
+
+
+**********************************************************************************************************
+
+
 Q.3 Find the majority element in the array. A majority element in an array A[] of size n is an element
    that appears more than n/2 times (and hence there is at most one such element).
 
@@ -16,6 +95,41 @@ Input : {3, 3, 4, 2, 4, 4, 2, 4, 4}
 Output : 4
 Explanation: The frequency of 4 is 5 which is greater than the half of the size of the array size.
 
+Code:
+public class Question3
+{
+	public static void main(String arg[])
+	{
+		int a[] = {3, 3, 4, 2, 4, 4, 2, 4, 4};
+		
+
+		for(int i = 0; i < a.length; i++)
+		{
+			int count = 1;
+			for(int j = i+1; j < a.length; j++)
+			{
+				if(a[i] == a[j])
+				{
+					count++;
+				}
+			}
+			if(count > a.length/2)
+			{
+				System.out.print(a[i]+" ");
+			}
+		}
+	}
+
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>javac Question3.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question3
+4
+
+
+***********************************************************************************************************
 
 
 Q4.Given an array of N integers, and a number sum, the task is to find the number of pairs of integers
@@ -60,17 +174,76 @@ The number of pairs are : 2
 
 Q5.Given an array and a value, find if there is a triplet in array whose sum is equal to the given value.
 If there is such a triplet present in array, then print the triplet and return true. Else return false.
-
 Examples:
- 
-
 Input: array = {12, 3, 4, 1, 6, 9}, sum = 24;
 Output: 12, 3, 9
+
+Code:
+public class Question5
+{
+	public static void main(String arg[])
+	{
+		int a[] = {12, 3, 4, 1, 6, 9};
+		int sum = 24;
+	
+		for(int i = 0; i <a.length; i++)
+		{
+			for(int j = i+1; j < a.length; j++)
+			{
+				for(int k = j+1; k <a.length; k++)
+				{
+					if(a[i]+a[j]+a[k] == sum)
+					{
+						System.out.print("\nTriplet pair is : "+a[i]+" , "+a[j]+" , "+a[k]);
+					}
+				}
+			}
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>javac Question5.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question5
+
+Triplet pair is : 12 , 3 , 9
+
+************************************************************************************************************************
+
+
 Q6.a[]={10,20,30,40,50}
    b[]={1,2,3,4,5}
  
   output array=c[]={10,5,20,4,30,3,40,2,50,1}
 
+Code:
+public class Question6
+{
+	public static void main(String arg[])
+	{
+		int a[]={10,20,30,40,50};
+		int b[]={1,2,3,4,5};
+		int c[] = new int [a.length+b.length];
+	
+		for(int i = 0; i <a.length; i++)
+		{
+			c[i*2] = a[i];
+			c[i*2+1] = b[b.length-1-i];
+		}
+
+		for(int i = 0; i <c.length; i++)
+		{
+			System.out.print(c[i]+" ");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>javac Question6.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question6
+10 5 20 4 30 3 40 2 50 1
 
 *********************************************************************************************************
 
@@ -134,13 +307,354 @@ public class Question7
 
 Q8.Wap input an array now delete  element from array, element is taken from user.
 
+Code: 
+
+import java.util.Scanner;
+public class Question8
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of the array : ");
+		int size = sc.nextInt();
+		int a[] = new int [size];
+		System.out.println("Enter the elements in array : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.println("The elements in array are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		System.out.println();
+		System.out.println("Enter the element which need to delete from the given array: ");
+		int del = sc.nextInt();
+		for(int i = 0; i < a.length; i++)
+		{
+			if(a[i] == del)
+			{
+				a[i] = -1;
+			}
+		}
+
+		System.out.println("The array after deleting element is : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			if(a[i] != -1)
+			{
+				System.out.print(a[i]+" ");
+			}
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>javac Question8.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question8
+Enter the size of the array :
+5
+Enter the elements in array :
+6
+10
+20
+30
+50
+The elements in array are :
+6 10 20 30 50
+Enter the element which need to delete from the given array:
+20
+The array after deleting element is :
+6 10 30 50
+
+
+**********************************************************************************
+
+
 Q9.Wap input an array now delete  element from array, position is taken from user.
+
+Code:
+
+import java.util.Scanner;
+public class Question9
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of the array : ");
+		int size = sc.nextInt();
+		int a[] = new int [size];
+		System.out.println("Enter the elements in array : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.println("The elements in array are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+
+		System.out.println();
+		System.out.println("Enter the element position to delete from the given array: ");
+		int pos = sc.nextInt();
+		for(int i = 0; i < a.length; i++)
+		{
+			if(i == pos-1)
+			{
+				a[i] = -1;
+			}
+		}
+
+		System.out.println("The array after deleting element from given position is : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			if(a[i] != -1)
+			{
+				System.out.print(a[i]+" ");
+			}
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>javac Question9.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question9
+Enter the size of the array :
+6
+Enter the elements in array :
+10
+30
+60
+90
+120
+150
+The elements in array are :
+10 30 60 90 120 150
+Enter the element position to delete from the given array:
+5
+The array after deleting element from given position is :
+10 30 60 90 150
+
+
+*****************************************************************************
+
 
 Q10.Wap input an array and rotate it in anti clock wise by any no give by user.
 
+Code:
+import java.util.Scanner;
+public class Question10
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of the array : ");
+		int size = sc.nextInt();
+		int a[] = new int [size];
+		System.out.println("Enter the elements in array : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.println("The elements in array are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		System.out.println("Enter the number of anti clock wise rorations : ");
+		int r = sc.nextInt();
+
+		for(int j = 1; j <= r; j++)
+		{
+			int temp = a[0];
+			for(int i = 0; i < a.length-1; i++)
+			{
+				a[i] = a[i+1];
+			}
+			a[a.length-1] = temp;
+		} 
+
+		System.out.println("The elements in array after "+r+" rotaion are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>javac Question10.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question10
+Enter the size of the array :
+8
+Enter the elements in array :
+39
+46
+98
+23
+78
+45
+32
+90
+The elements in array are :
+39 46 98 23 78 45 32 90
+Enter the number of anti clock wise rorations :
+4
+The elements in array after 4 rotaion are :
+78 45 32 90 39 46 98 23
+
+
+***************************************************************************
+
+
 Q11.Wap input an array and rotate it in clock wise by any no give by user.
 
+import java.util.Scanner;
+public class Question11
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of the array : ");
+		int size = sc.nextInt();
+		int a[] = new int [size];
+		System.out.println("Enter the elements in array : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.println("The elements in array are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		System.out.println("Enter the number of clock wise rotations : ");
+		int r = sc.nextInt();
+
+		for(int j = 1; j <= r; j++)
+		{
+			int temp = a[a.length-1];
+			for(int i = a.length-1; i > 0; i--)
+			{
+				a[i] = a[i-1];
+			}
+			a[0] = temp;
+		}
+
+		System.out.println("The elements in array after "+r+" rotation are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question11
+Enter the size of the array :
+8
+Enter the elements in array :
+23
+56
+89
+45
+76
+32
+69
+34
+The elements in array are :
+23 56 89 45 76 32 69 34
+Enter the number of clock wise rotations :
+5
+The elements in array after 5 rotation are :
+45 76 32 69 34 23 56 89
+
+
+************************************************************************
+
+
 Q12.Wap input an array and delete all duplicate element from array.
+
+Code:
+
+import java.util.Scanner;
+public class Question12
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of the array : ");
+		int size = sc.nextInt();
+		int a[] = new int [size];
+		System.out.println("Enter the elements in array : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.println("The elements in array are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		System.out.println("Enter the array element from given array to delete : ");
+		int del = sc.nextInt();
+
+		for(int i = 0; i < a.length; i++)
+		{
+			if(a[i] == del)
+			{
+				a[i] = -1;
+			}
+		}
+
+		System.out.println("The array elements after deleting : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			if(a[i] != -1)
+			{
+				System.out.print(a[i]+" ");
+			}	
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>javac Question12.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question12
+Enter the size of the array :
+8
+Enter the elements in array :
+12
+34
+23
+56
+43
+78
+56
+49
+The elements in array are :
+12 34 23 56 43 78 56 49
+Enter the array element from given array to delete :
+23
+The array elements after deleting :
+12 34 56 43 78 56 49
+
+
+***************************************************************************
+
 
 Q13. Write a Java program to find max number in an array.
 
@@ -184,3 +698,74 @@ The max array element is : 66
 
 Q14.Wap input an array now insert any element at any position ,
     element and position is taken by user.
+
+Code:
+
+import java.util.Scanner;
+public class Question14
+{
+	public static void main(String arg[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of the array : ");
+		int size = sc.nextInt();
+		int a[] = new int [size];
+		System.out.println("Enter the elements in array : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		System.out.println("The elements in array are : ");
+		for(int i = 0; i < a.length; i++)
+		{
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		int arr[] = new int [a.length];
+		System.out.println("Enter the element to insert : ");
+		int ele = sc.nextInt();
+		System.out.println("Enter the position, where to insert : ");
+		int pos = sc.nextInt();
+
+		for(int i = 0; i < arr.length; i++)
+		{
+			if(i == pos-1)
+			{
+				arr[i] = ele;
+			}
+			else
+			{
+				arr[i] = a[i];
+			}
+		}
+
+		System.out.println("The array elements after inserting new element: ");
+		for(int i = 0; i < arr.length; i++)
+		{
+			System.out.print(arr[i]+" ");	
+		}
+	}
+}
+
+Output:
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>javac Question14.java
+
+C:\Users\shubh\work\Codenera\Java\Array\ArrayAssignment2.3>java Question14
+Enter the size of the array :
+5
+Enter the elements in array :
+20
+30
+50
+70
+90
+The elements in array are :
+20 30 50 70 90
+Enter the element to insert :
+60
+Enter the position, where to insert :
+3
+The array elements after inserting new element:
+20 30 60 70 90
+
