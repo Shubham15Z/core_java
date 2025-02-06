@@ -1,14 +1,14 @@
 /*
-21. Print a pattern with stars on one half and numbers on the other.
+20. Print a pattern with numbers on one half and stars on the other.
 
-*****12345
-****1234
-***123
-**12
-*1
+12345*****
+1234****
+123***
+12**
+1*
 */
 
-public class Question21
+public class Question20
 {
 	public static void main(String arg[])
 	{	
@@ -16,11 +16,11 @@ public class Question21
 		{
 			for(int j = 1; j <= i; j++)
 			{
-				System.out.print("*");
+				System.out.print(j);
 			}
 			for(int j = 1; j <= i; j++)
 			{
-				System.out.print(j);
+				System.out.print("*");
 			}
 			System.out.println();
 		}

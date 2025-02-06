@@ -1,25 +1,21 @@
 /*
+30. Print a pattern with numbers in the shape of a star.
 
-4. Print a diamond shape with numbers and stars.
-
-   1
-  2*3
- 4*5*6
-7*8*9*10
- 4*5*6
-  2*3
-   1
-
+  1
+ 2*3
+4*5*6
+ 2*3
+  1
 */
 
-public class Question4
+public class Question30
 {
 	public static void main(String arg[])
 	{
 		int n = 1;
-		for(int i = 1; i <= 4; i++)
+		for(int i = 1; i <= 3; i++)
 		{
-			for(int j = 3; j >= i; j--)
+			for(int j = 2; j >= i; j--)
 			{
 				System.out.print(" ");
 			}
@@ -35,10 +31,10 @@ public class Question4
 			System.out.println();
 		}
 		
-		int m = 4;
-		for(int i = 3; i > 0; i--)
+		int m = 2;
+		for(int i = 2; i > 0; i--)
 		{
-			for(int j = i; j <= 3; j++)
+			for(int j = i; j <= 2; j++)
 			{
 				System.out.print(" ");
 			}
